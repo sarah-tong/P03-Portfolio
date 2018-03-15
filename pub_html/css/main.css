@@ -3,16 +3,19 @@
 STYLE GUIDE STYLING
 Default styling for the style guide
 */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  background-color: white; }
-
-section:not([id]) {
-  margin: 1em 0;
-  padding: 0.5em 0;
-  border-top: 0.15em solid #333; }
+  background-color: white;
+  line-height: 1.5;
+  letter-spacing: 1px; }
 
 section[id]:first-of-type {
   margin-top: 5rem; }
@@ -20,8 +23,10 @@ section[id]:first-of-type {
 section h3 {
   margin-bottom: 0; }
 
+section a,
 section p {
-  margin-top: 0; }
+  margin-top: 0;
+  font-size: 0.875rem; }
 
 nav a:focus,
 nav a:hover {
@@ -87,17 +92,15 @@ nav li {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   text-transform: uppercase; }
-
-.button-nav:hover {
-  font-weight: 800; }
-
-.button-nav:hover:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -0.25rem;
-  border-bottom: 2px dashed #EF6362; }
+  .button-nav:hover {
+    font-weight: 800; }
+  .button-nav.active:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -0.25rem;
+    border-bottom: 2px dashed #EF6362; }
 
 /*  Styling for mobile nav button */
 .mobile-nav {
@@ -143,13 +146,6 @@ nav li {
 
 .main-nav li {
   padding: 0 2.25rem 2.5rem 4rem; }
-
-.main-nav a:before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  width: 2rem;
-  border-bottom: 2px dashed #EF6362; }
 
 .nav-wrapper {
   min-width: 310px;
@@ -218,7 +214,8 @@ h1 {
   font-size: 2rem;
   color: #EF6362;
   text-transform: uppercase;
-  font-weight: 800; }
+  font-weight: 800;
+  margin: 0; }
 
 h2 {
   font-size: 1.25rem;
@@ -231,6 +228,9 @@ h3 {
   color: black;
   font-weight: 100;
   font-style: italic; }
+
+h4 {
+  margin-bottom: 0; }
 
 /* Styling for bulleted lists */
 p {
@@ -259,7 +259,7 @@ COMBINED ELEMENTS -------------------
     block of code. It's just a nice feature that prevent the images from
     accidentally becoming selected/inverted when the user interacts with the scroller. */ }
 
-.project-wrapper {
+.project-panel-wrapper {
   width: 310px;
   min-height: 100vh;
   -webkit-transition: all 0.3s;
@@ -268,6 +268,13 @@ COMBINED ELEMENTS -------------------
   letter-spacing: 1px;
   position: relative;
   overflow: hidden; }
+
+.project-panel-wrapper a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9; }
 
 .project-number {
   position: absolute;
@@ -331,7 +338,7 @@ COMBINED ELEMENTS -------------------
   -ms-transform: translate(-17%, 0%);
   transform: translate(-17%, 0%); }
 
-#SMA-project-wrapper {
+#SMA-project-panel-wrapper {
   background-color: #4696CC; }
 
 #SMA-project-banner-img {
@@ -390,6 +397,7 @@ top: 2.5rem;
 */
 /* Website grid */
 .grid-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,13 +447,75 @@ top: 2.5rem;
 #vivid-blue {
   background-color: #3057D5; }
 
-/* Process Analysis styling */
-.process-analysis img {
-  width: 100%; }
+/* Project page styling */
+.project-wrapper section {
+  width: 100%;
+  margin: 0 0 6rem; }
 
-iframe {
-  width: 40rem;
-  height: 22.5rem; }
+.project-content-wrapper {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%; }
+
+.flex-project-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.left-side,
+.right-side {
+  width: 50%; }
+
+.left-side {
+  padding-right: 4rem; }
+
+.project-wrapper section:first-child {
+  margin-top: 9rem; }
+
+.brief-description {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 1rem 0; }
+
+.overview .left-side {
+  width: 70%; }
+
+.overview .right-side {
+  width: 30%; }
+
+.subsection, .sub-subsection {
+  margin-top: 4rem; }
+
+.project-wrapper section:not(:first-child) p {
+  margin-top: 1.75rem; }
+
+.img-wrapper {
+  margin: 1rem 0 2rem; }
+
+.img-wrapper img {
+  max-width: 100%; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1rem 0 2rem; }
+
+.video-wrapper embed,
+.video-wrapper iframe,
+.video-wrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* VIA styling */
+#VIA-business-problem-img, #VIA-customer-segment-img {
+  padding: 5rem 1rem; }
 
 /* Bio styling */
 #bio-wrapper p span {
@@ -562,6 +632,25 @@ iframe {
   line-height: 2rem; }
 
 /* Media Queries */
+@media (max-width: 1118px) {
+  .project-content-wrapper {
+    max-width: 100%;
+    padding-right: 4rem; }
+  .flex-project-content-wrapper,
+  .left-side,
+  .overview .left-side,
+  .overview .right-side,
+  .right-side {
+    display: block;
+    width: 100%; }
+  .overview .left-side {
+    margin-bottom: 4rem; }
+  .overview .right-side {
+    padding-bottom: 5rem;
+    border-bottom: 1px dashed #aaa; }
+  .left-side {
+    padding-right: 0; } }
+
 @media (max-width: 768px) {
   .mobile-nav {
     top: 0;
