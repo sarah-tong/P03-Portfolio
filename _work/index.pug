@@ -1,11 +1,68 @@
-octype html
-html
-	head
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		meta(charset="utf-8")
-			
-		title Preprocessing: Home
-		
-		link(rel="stylesheet" href="css/main.css")
-		
-	body
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(charset="utf-8")
+
+    title Sarah Tong – UX Designer – Portfolio
+
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="css/normalize.css")
+    link(rel="stylesheet" href="css/smoothDivScroll.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i")
+
+
+  body
+    div(class="grid-wrapper")
+      div(class="nav-wrapper")
+        button(class="mobile-nav")
+          span
+          span
+          span
+
+        include nav.pug
+
+      div(id="makeMeScrollable")
+        div(class="grid-wrapper")
+
+          div(class="project-wrapper")
+            img(id="VIA-project-banner-img" src="img/VIA/VIA-train.jpg" alt="VIA train project image")
+            span(class="overlay")
+            div(class="project-detail")
+              h3(class="project-number") 01
+              span(class="line")
+              p(class="project-name") VIA Rail
+
+          div(class="project-wrapper")
+            img(id="Toyota-project-banner-img" src="img/Toyota/Toyota.png" alt="Toyota automated project image")
+            span(class="overlay")
+            div(class="project-detail")
+              h3(class="project-number") 02
+              span(class="line")
+              p(class="project-name") Toyota
+
+          div(class="project-wrapper")
+            img(id="Intl-Coop-project-banner-img" src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
+            span(class="overlay")
+            div(class="project-detail")
+              h3(class="project-number") 03
+              span(class="line")
+              p(class="project-name") International Co-op
+
+          div(class="project-wrapper" id="SMA-project-wrapper")
+            img(id="SMA-project-banner-img" src="img/SMA/SMA_Logo.png" alt="SMA logo")
+            span(class="overlay")
+            div(class="project-detail")
+              h3(class="project-number") 04
+              span(class="line")
+              p(class="project-name") SFU Student Marketing Association
+
+    script(src="js/hamburger.js")
+
+    //- Smooth Div Scroll Plugin: http://www.smoothdivscroll.com/
+    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script(type="text/javascript" src="https://cdn.rawgit.com/tkahn/Smooth-Div-Scroll/master/js/jquery-ui-1.10.3.custom.min.js")
+    script(type="text/javascript" src="https://cdn.rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.min.js")
+    script(type="text/javascript" src="https://cdn.rawgit.com/davetayls/jquery.kinetic/master/jquery.kinetic.min.js")
+    script(type="text/javascript" src="https://cdn.rawgit.com/tkahn/Smooth-Div-Scroll/master/js/jquery.smoothdivscroll-1.3-min.js")
+    script(type="text/javascript" src="js/smooth-div-scroll-initialize.js")
