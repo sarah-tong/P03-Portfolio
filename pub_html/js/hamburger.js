@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("Script is running!");
+// console.log("Script is running!");
 
 var windowWidth = window.innerWidth;
 console.log("Window width: " + windowWidth);
