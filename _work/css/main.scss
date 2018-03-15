@@ -291,6 +291,7 @@ h3 {
 }
 
 h4 {
+  font-size: 0.875rem;
   margin-bottom: 0;
 }
 /* Styling for bulleted lists */
@@ -560,12 +561,17 @@ top: 2.5rem;
   width: 30%;
 }
 
-.subsection, .sub-subsection {
-    margin-top: 4rem;
+.overview .right-side p {
+  margin-top: 0;
 }
 
-.project-wrapper section:not(:first-child) p {
-    margin-top: 1.75rem;
+.sub-subsection,
+.subsection {
+  margin-top: 4rem;
+}
+
+.project-wrapper section p {
+  margin-top: 1.75rem;
 }
 
 .img-wrapper {
@@ -595,11 +601,19 @@ top: 2.5rem;
   height: 100%;
 }
 
+footer p {
+  font-size: 0.7rem;
+  text-align: center;
+}
 /* VIA styling */
-#VIA-business-problem-img, #VIA-customer-segment-img {
-    padding: 5rem 1rem;
+#VIA-business-problem-img,
+#VIA-customer-segment-img {
+  padding: 5rem 1rem;
 }
 
+#VIA-solution .sub-subsection:first-of-type {
+  margin-top: 0;
+}
 /* Bio styling */
 #bio-wrapper p span {
   font-weight: 800;
@@ -730,6 +744,7 @@ top: 2.5rem;
 @media (max-width: 1118px) {
   .project-content-wrapper {
     max-width: 100%;
+margin-left: 2rem;
     padding-right: 4rem;
   }
 
@@ -785,5 +800,10 @@ top: 2.5rem;
 
   .nav-wrapper.toggle {
     margin-left: 0;
+  }
+}
+@media (max-width: 475px) {
+  .project-content-wrapper {
+    padding-right: 2rem;
   }
 }
