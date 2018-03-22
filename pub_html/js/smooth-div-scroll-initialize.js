@@ -1,7 +1,8 @@
 $(document).ready(function() {
-  $('div#makeMeScrollable').smoothDivScroll({
+  $('#makeMeScrollable').smoothDivScroll({
     hotSpotScrolling: true,
-    visibleHotSpotBackgrounds: "",
+    hotSpotScrollingStep: 5,
+    visibleHotSpotBackgrounds: "hover",
     easingAfterMouseWheelScrolling: false,
     touchScrolling: true
   });
