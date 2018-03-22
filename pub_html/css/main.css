@@ -130,7 +130,7 @@ nav li {
   height: 0.1875rem;
   margin: 0 0.6rem 0.3rem;
   display: block;
-  background: black; }
+  background: #EF6362; }
 
 /* Styling for main navigation */
 .main-nav {
@@ -143,10 +143,10 @@ nav li {
   margin-top: 5.25rem; }
 
 .main-nav li {
-  padding: 0 2.25rem 2.5rem 4rem; }
+  padding: 0 2.25rem 1.85rem 4rem; }
 
 .nav-wrapper {
-  min-width: 310px;
+  min-width: 19.375rem;
   min-height: 100vh;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -158,6 +158,17 @@ nav li {
     margin-left: -16.6875rem; }
   .nav-wrapper.toggle {
     margin-left: -16.6875rem; }
+
+.short-bio {
+  font-size: 0.75rem;
+  position: absolute;
+  width: 19.375rem;
+  padding: 0 4rem;
+  bottom: 5rem; }
+  .short-bio span {
+    display: block;
+    width: 1rem;
+    height: 2rem; }
 
 /* Styling for cta buttons */
 .cta-button {
@@ -259,11 +270,8 @@ COMBINED ELEMENTS -------------------
     accidentally becoming selected/inverted when the user interacts with the scroller. */ }
 
 .project-panel-wrapper {
-  width: 310px;
+  width: 19.375rem;
   min-height: 100vh;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden; }
@@ -283,7 +291,10 @@ COMBINED ELEMENTS -------------------
   margin: 2.69rem 0 0 2.02rem;
   font-style: normal;
   top: 0;
-  color: #EF6362; }
+  color: #EF6362;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; }
 
 .line {
   position: absolute;
@@ -297,7 +308,10 @@ COMBINED ELEMENTS -------------------
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   top: 5.5rem;
-  left: -1.5rem; }
+  left: -1.5rem;
+  -webkit-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  transition: border 0.5s; }
 
 .project-name {
   position: absolute;
@@ -315,74 +329,134 @@ COMBINED ELEMENTS -------------------
   transform-origin: 100% 100%;
   top: 10.5rem;
   left: -16.3rem;
-  color: #EF6362; }
+  color: #EF6362;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; }
 
-#SMA-project-panel-wrapper-img,
-.project-panel-wrapper img {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+#VIA-panel img {
+  height: 106vh;
+  top: 0;
+  -webkit-transform: translate(-48%, 0%);
+  -ms-transform: translate(-48%, 0%);
+  transform: translate(-48%, 0%);
+  -webkit-filter: grayscale(100%) contrast(250%) brightness(150%);
+  filter: grayscale(100%) contrast(250%) brightness(150%);
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
   -o-transition: filter 0.5s;
   transition: filter 0.5s;
   transition: filter 0.5s, -webkit-filter 0.5s; }
 
-.project-panel-wrapper img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%); }
+#VIA-panel:hover img {
+  -webkit-filter: grayscale(0%) contrast(100%) brightness(100%);
+  filter: grayscale(0%) contrast(100%) brightness(100%); }
 
-#VIA-project-banner-img {
-  height: 115vh;
-  top: 0;
-  -webkit-transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%); }
-
-#Toyota-project-banner-img {
+#toyota-panel img {
   height: 100vh;
   -webkit-transform: translate(-15%, 0%);
   -ms-transform: translate(-15%, 0%);
-  transform: translate(-15%, 0%); }
+  transform: translate(-15%, 0%);
+  -webkit-filter: grayscale(100%) contrast(150%) brightness(700%);
+  filter: grayscale(100%) contrast(150%) brightness(700%);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  -o-transition: filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s; }
 
-#Intl-Coop-project-banner-img {
+#toyota-panel:hover img {
+  -webkit-filter: grayscale(0%) contrast(100%) brightness(100%);
+  filter: grayscale(0%) contrast(100%) brightness(100%); }
+
+#intl-coop-panel img {
   height: 118vh;
-  -webkit-transform: translate(-17%, 0%);
-  -ms-transform: translate(-17%, 0%);
-  transform: translate(-17%, 0%); }
+  -webkit-transform: translate(-18%, 0%);
+  -ms-transform: translate(-18%, 0%);
+  transform: translate(-18%, 0%);
+  -webkit-filter: grayscale(100%) contrast(200%) brightness(150%);
+  filter: grayscale(100%) contrast(200%) brightness(150%);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  -o-transition: filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s; }
 
-#SMA-project-panel-wrapper {
-  background-color: #4696CC; }
+#intl-coop-panel:hover img {
+  -webkit-filter: grayscale(0%) contrast(100%) brightness(100%);
+  filter: grayscale(0%) contrast(100%) brightness(100%); }
 
-#SMA-project-banner-img {
+#SMA-panel img {
   position: absolute;
-  display: block;
-  width: 50%;
-  height: auto;
-  top: 0;
+  width: 60%;
+  top: 4rem;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto; }
+  margin: auto;
+  -webkit-filter: brightness(20%);
+  filter: brightness(20%);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  -o-transition: filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s; }
 
-.overlay {
+#SMA-panel:hover img {
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%); }
+
+#SMA-panel .background-colored-panel {
+  width: 100%;
+  height: 100vh;
+  background-color: #4696CC;
+  -webkit-filter: grayscale(100%) brightness(200%);
+  filter: grayscale(100%) brightness(200%);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  -o-transition: filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s; }
+
+#SMA-panel:hover .background-colored-panel {
+  -webkit-filter: grayscale(0%) brightness(100%);
+  filter: grayscale(0%) brightness(100%); }
+
+.project-panel-wrapper .overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: #213556;
   opacity: 0.8;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out; }
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
 
-.overlay:hover {
+.project-panel-wrapper:hover .overlay {
   opacity: 0; }
 
-.project-panel-wrapper:nth-of-type(3) .overlay:hover,
-.project-panel-wrapper:nth-of-type(4) .overlay:hover {
-  opacity: 0.8; }
-
 /* source: https://codepen.io/leincetta/pen/pJyrpg */
+#VIA-panel:hover .project-name,
+#VIA-panel:hover .project-number,
+#intl-coop-panel:hover .project-name,
+#intl-coop-panel:hover .project-number {
+  color: black; }
+
+#VIA-panel:hover .line,
+#intl-coop-panel:hover .line {
+  border-top: 2px dashed black; }
+
+#SMA-panel:hover .project-name,
+#SMA-panel:hover .project-number,
+#toyota-panel:hover .project-name,
+#toyota-panel:hover .project-number {
+  color: white; }
+
+#SMA-panel:hover .line,
+#toyota-panel:hover .line {
+  border-top: 2px dashed white; }
+
 /*
 .product-listing img:hover {
 opacity: 1;
