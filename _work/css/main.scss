@@ -170,7 +170,7 @@ nav li {
   height: 0.1875rem;
   margin: 0 0.6rem 0.3rem;
   display: block;
-  background: black;
+  background: $coral;
 }
 /* Styling for main navigation */
 .main-nav {
@@ -185,7 +185,7 @@ nav li {
 }
 
 .main-nav li {
-  padding: 0 2.25rem 2.5rem 4rem;
+  padding: 0 2.25rem 1.85rem 4rem;
 }
 
 .main-nav a {
@@ -199,7 +199,7 @@ nav li {
 }
 
 .nav-wrapper {
-  min-width: 310px;
+  min-width: 19.375rem;
   min-height: 100vh;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -216,6 +216,20 @@ nav li {
 
   &.toggle {
     margin-left: -16.6875rem;
+  }
+}
+
+.short-bio {
+  font-size: 0.75rem;
+  position: absolute;
+  width: 19.375rem;
+  padding: 0 4rem;
+  bottom: 5rem;
+
+  span {
+    display: block;
+    width: 1rem;
+    height: 2rem;
   }
 }
 /* Styling for cta buttons */
@@ -330,11 +344,8 @@ COMBINED ELEMENTS -------------------
 }
 
 .project-panel-wrapper {
-  width: 310px;
+  width: 19.375rem;
   min-height: 100vh;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
@@ -358,6 +369,7 @@ COMBINED ELEMENTS -------------------
   font-style: normal;
   top: 0;
   color: $coral;
+  transition: color 0.5s;
 }
 
 .line {
@@ -369,6 +381,7 @@ COMBINED ELEMENTS -------------------
   transform-origin: 100% 100%;
   top: 5.5rem;
   left: -1.5rem;
+  transition: border 0.5s;
 }
 
 .project-name {
@@ -384,69 +397,120 @@ COMBINED ELEMENTS -------------------
   top: 10.5rem;
   left: -16.3rem;
   color: $coral;
+  transition: color 0.5s;
 }
 
-#SMA-project-panel-wrapper-img,
-.project-panel-wrapper img {
-  filter: grayscale(0%);
-  transition: filter 0.5s;
+#VIA-panel {
+  img {
+    height: 106vh;
+    top: 0;
+    transform: translate(-48%, 0%);
+    filter: grayscale(100%) contrast(250%) brightness(150%);
+    transition: filter 0.5s;
+  }
+
+  &:hover img {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+  }
 }
 
-.project-panel-wrapper img:hover {
-  filter: grayscale(0%);
+#toyota-panel {
+  img {
+    height: 100vh;
+    transform: translate(-15%, 0%);
+    filter: grayscale(100%) contrast(150%) brightness(700%);
+    transition: filter 0.5s;
+  }
+
+  &:hover img {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+  }
 }
 
-#VIA-project-banner-img {
-  height: 115vh;
-  top: 0;
-  transform: translate(-50%, 0%);
+#intl-coop-panel {
+  img {
+    height: 118vh;
+    transform: translate(-18%, 0%);
+    filter: grayscale(100%) contrast(200%) brightness(150%);
+    transition: filter 0.5s;
+  }
+
+  &:hover img {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+  }
 }
 
-#Toyota-project-banner-img {
-  height: 100vh;
-  transform: translate(-15%, 0%);
+#SMA-panel {
+  img {
+    position: absolute;
+    width: 60%;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    filter: brightness(20%);
+    transition: filter 0.5s;
+  }
+
+  &:hover img {
+    filter: brightness(100%);
+  }
 }
 
-#Intl-Coop-project-banner-img {
-  height: 118vh;
-  transform: translate(-17%, 0%);
+#SMA-panel {
+  .background-colored-panel {
+    width: 100%;
+    height: 100vh;
+    background-color: #4696CC;
+    filter: grayscale(100%) brightness(200%);
+    transition: filter 0.5s;
+  }
+
+  &:hover .background-colored-panel {
+    filter: grayscale(0%) brightness(100%);
+  }
 }
 
-#SMA-project-panel-wrapper {
-  background-color: #4696CC;
-}
+.project-panel-wrapper {
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33, 53, 86);
+    opacity: 0.8;
+    transition: opacity 0.5s;
+  }
 
-#SMA-project-banner-img {
-  position: absolute;
-  display: block;
-  width: 50%;
-  height: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(33, 53, 86);
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.overlay:hover {
-  opacity: 0;
-}
-
-.project-panel-wrapper:nth-of-type(3) .overlay:hover,
-.project-panel-wrapper:nth-of-type(4) .overlay:hover {
-  opacity: 0.8;
+  &:hover .overlay {
+    opacity: 0;
+  }
 }
 /* source: https://codepen.io/leincetta/pen/pJyrpg */
+#VIA-panel,
+#intl-coop-panel {
+  &:hover .project-name,
+  &:hover .project-number {
+    color: black;
+  }
+
+  &:hover .line {
+    border-top: 2px dashed black;
+  }
+}
+
+#SMA-panel,
+#toyota-panel {
+  &:hover .project-name,
+  &:hover .project-number {
+    color: white;
+  }
+
+  &:hover .line {
+    border-top: 2px dashed white;
+  }
+}
 /*
 .product-listing img:hover {
 opacity: 1;
