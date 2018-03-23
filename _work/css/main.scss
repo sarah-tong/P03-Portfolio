@@ -80,7 +80,7 @@ INTERACTIVE ELEMENTS -------------------
 
 .in-text-link:hover {
   // color: white;
-  font-weight: 700;
+  font-weight: 800;
   border-bottom: 2px dashed $coral;
 
   &:after {
@@ -279,7 +279,7 @@ nav li {
     height: 2.5rem;
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     background: $coral;
     color: white;
@@ -346,7 +346,7 @@ li.back-desktop {
   display: inline-block;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.0625rem;
   padding: 0.5rem;
   background: $coral;
@@ -375,7 +375,7 @@ li.back-desktop {
 .input-field-label {
   display: block;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.25rem;
 }
 
@@ -811,7 +811,7 @@ footer a {
   top: 1.75rem;
 
   &:hover {
-    font-weight: 700;
+    font-weight: 800;
   }
 
   &:hover:before {

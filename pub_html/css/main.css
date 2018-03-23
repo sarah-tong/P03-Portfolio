@@ -67,7 +67,7 @@ INTERACTIVE ELEMENTS -------------------
     background-color: white; }
 
 .in-text-link:hover {
-  font-weight: 700;
+  font-weight: 800;
   border-bottom: 2px dashed #EF6362; }
 
 /* Styling for the navigation button */
@@ -215,7 +215,7 @@ nav li {
     height: 2.5rem;
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     background: #EF6362;
     color: white; }
@@ -273,7 +273,7 @@ li.back-desktop {
   display: inline-block;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.0625rem;
   padding: 0.5rem;
   background: #EF6362;
@@ -301,7 +301,7 @@ li.back-desktop {
 .input-field-label {
   display: block;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.25rem; }
 
 #text-input-field {
@@ -722,7 +722,7 @@ footer a {
   color: #EF6362;
   top: 1.75rem; }
   footer a:hover {
-    font-weight: 700; }
+    font-weight: 800; }
   footer a:hover:before {
     content: "";
     position: absolute;
