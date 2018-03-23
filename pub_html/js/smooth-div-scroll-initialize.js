@@ -6,4 +6,10 @@ $(document).ready(function() {
     easingAfterMouseWheelScrolling: false,
     touchScrolling: true
   });
+
+  // if ($(window).width() < 768) {
+  //   $('#makeMeScrollable').smoothDivScroll({
+  //     visibleHotSpotBackgrounds: "always"
+  //   });
+  // }
 });
