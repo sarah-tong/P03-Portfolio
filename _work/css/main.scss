@@ -65,22 +65,28 @@ INTERACTIVE ELEMENTS -------------------
     position: absolute;
     z-index: -1;
     bottom: -5px;
-    left: 48%;
+    left: 50%;
     transform: translateX(-50%);
     content: '';
     width: 100%;
     height: 2px;
-    background-color: $coral;
+    // background-color: $coral;
     transition: all 250ms;
+    content: "";
+    // border-bottom: 2px dashed $coral;
+    background-color: white;
   }
 }
 
 .in-text-link:hover {
-  color: white;
+  // color: white;
+  font-weight: 700;
+  border-bottom: 2px dashed $coral;
 
   &:after {
-    height: 160%;
-    width: 101%;
+    // height: 160%;
+    // width: 101%;
+    // width: 100%;
   }
 }
 /* Styling for the navigation button */
@@ -106,6 +112,15 @@ nav li {
 
   &:hover {
     font-weight: 800;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -0.25rem;
+      border-bottom: 2px dashed $coral;
+    }
   }
 
   &.active {
@@ -295,6 +310,7 @@ nav li {
   width: 19.375rem;
   padding: 0 4rem;
   bottom: 5rem;
+  color: $coral;
 
   span {
     display: block;
@@ -387,6 +403,7 @@ h2 {
   color: black;
   text-transform: uppercase;
   font-weight: 800;
+  text-align: center;
 }
 
 h3 {
@@ -603,35 +620,6 @@ COMBINED ELEMENTS -------------------
     border-top: 2px dashed white;
   }
 }
-/*
-.product-listing img:hover {
-opacity: 1;
-}
-
-.product-detail {
-display: inline-flex;
-width: 100%;
-}
-
-.product-detail h3, .product-detail p {
-flex: 1 0 auto;
-font-weight: 700;
-position: absolute;
-left: 0rem;
-margin: auto;
-text-align: center;
-width: max-content;
-height: fit-content;
-}
-
-.product-detail h3 {
-top: 0rem;
-}
-
-.product-detail p {
-top: 2.5rem;
-}
-*/
 /* Website grid */
 .grid-wrapper {
   position: relative;
@@ -702,6 +690,10 @@ top: 2.5rem;
   max-width: 66.666667%;
 }
 
+.content-wrapper .subsection:first-of-type {
+  margin-top: 1.75rem;
+}
+
 .flex-content-wrapper {
   display: flex;
 }
@@ -713,6 +705,10 @@ top: 2.5rem;
 
 .left-side {
   padding-right: 4rem;
+}
+
+.project-wrapper h4 {
+  margin-top: 1.75rem;
 }
 
 section:first-of-type {
@@ -735,7 +731,7 @@ section:first-of-type {
 
 .overview .content-wrapper {
   padding-bottom: 5rem;
-  border-bottom: 1px dashed $light-grey;
+  border-bottom: 2px dashed $light-grey;
 }
 
 .overview .right-side p {
@@ -796,9 +792,36 @@ footer {
   margin: 6rem 0 5rem;
 }
 
+footer a,
 footer p {
+  position: relative;
+  display: block;
+  width: fit-content;
   font-size: 0.7rem;
-  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+footer p {
+  top: 0.95rem;
+}
+
+footer a {
+  color: $coral;
+  top: 1.75rem;
+
+  &:hover {
+    font-weight: 700;
+  }
+
+  &:hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -0.15rem;
+    border-bottom: 2px dashed #EF6362;
+  }
 }
 /* VIA styling */
 #VIA-business-problem-img,
@@ -808,6 +831,10 @@ footer p {
 
 #VIA-solution .sub-subsection:first-of-type {
   margin-top: 0;
+}
+
+#VIA-solution .img-wrapper:first-of-type {
+  margin-top: 1.75rem;
 }
 /* Bio styling */
 #bio-wrapper p span {
@@ -970,7 +997,7 @@ footer p {
 
   .overview .right-side {
     padding-bottom: 5rem;
-    border-bottom: 1px dashed $light-grey;
+    border-bottom: 2px dashed $light-grey;
   }
 
   .overview .content-wrapper {
@@ -1003,7 +1030,7 @@ footer p {
 
   .mobile-nav.toggle {
     top: 0;
-    left: 16.5rem;
+    left: 15.5rem;
   }
   // .nav-wrapper.open {
   //   margin-left: -16.6875rem;
