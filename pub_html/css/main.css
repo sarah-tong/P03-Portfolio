@@ -357,8 +357,8 @@ COMBINED ELEMENTS -------------------
 #makeMeScrollable {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 #makeMeScrollable div.scrollableArea {
   float: left;
@@ -381,13 +381,12 @@ COMBINED ELEMENTS -------------------
 
 .project-number {
   position: absolute;
+  top: 0;
   color: black;
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
   margin: 2.69rem 0 0 2.02rem;
-  font-style: normal;
-  top: 0;
   color: #EF6362;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
@@ -424,7 +423,7 @@ COMBINED ELEMENTS -------------------
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
-  top: 10.5rem;
+  top: 10rem;
   left: -16.1rem;
   color: #EF6362;
   -webkit-transition: color 0.5s;
@@ -433,7 +432,6 @@ COMBINED ELEMENTS -------------------
 
 #VIA-panel img {
   height: 106vh;
-  top: 0;
   -webkit-transform: translate(-48%, 0%);
   -ms-transform: translate(-48%, 0%);
   transform: translate(-48%, 0%);
@@ -491,8 +489,8 @@ COMBINED ELEMENTS -------------------
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-filter: brightness(20%);
-  filter: brightness(20%);
+  -webkit-filter: brightness(0%);
+  filter: brightness(0%);
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
   -o-transition: filter 0.5s;
@@ -519,21 +517,34 @@ COMBINED ELEMENTS -------------------
   -webkit-filter: grayscale(0%) brightness(100%);
   filter: grayscale(0%) brightness(100%); }
 
-.project-panel-wrapper .overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #213556;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
+.project-panel-wrapper {
+  /* source: https://codepen.io/leincetta/pen/pJyrpg */ }
+  .project-panel-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightsteelblue;
+    opacity: 0.8;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    mix-blend-mode: multiply; }
+  .project-panel-wrapper:hover .overlay {
+    opacity: 0; }
+  .project-panel-wrapper .blue-img-filter {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #213556;
+    mix-blend-mode: lighten;
+    -webkit-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s; }
+  .project-panel-wrapper:hover .blue-img-filter {
+    background: black; }
 
-.project-panel-wrapper:hover .overlay {
-  opacity: 0; }
-
-/* source: https://codepen.io/leincetta/pen/pJyrpg */
 #VIA-panel:hover .project-name,
 #VIA-panel:hover .project-number,
 #intl-coop-panel:hover .project-name,
@@ -905,3 +916,34 @@ footer a {
 @media (max-width: 475px) {
   .content-wrapper {
     padding-right: 2rem; } }
+
+@media (hover: none), (hover: on-demand) {
+  #SMA-panel .background-colored-panel,
+  #SMA-panel img,
+  #VIA-panel img,
+  #intl-coop-panel img,
+  #toyota-panel img {
+    -webkit-filter: none;
+    filter: none; }
+  #VIA-panel .project-name,
+  #VIA-panel .project-number,
+  #intl-coop-panel .project-name,
+  #intl-coop-panel .project-number {
+    color: black; }
+  #VIA-panel .line,
+  #intl-coop-panel .line {
+    border-top: 2px dashed black; }
+  #SMA-panel .project-name,
+  #SMA-panel .project-number,
+  #toyota-panel .project-name,
+  #toyota-panel .project-number {
+    color: white; }
+  #SMA-panel .line,
+  #toyota-panel .line {
+    border-top: 2px dashed white; }
+  .project-panel-wrapper .overlay {
+    opacity: 0; }
+  .project-panel-wrapper .blue-img-filter {
+    background: black; }
+  .back-desktop {
+    display: none; } }

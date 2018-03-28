@@ -435,12 +435,11 @@ COMBINED ELEMENTS -------------------
 #makeMeScrollable {
   position: relative;
   width: 100%;
-  overflow: hidden;
   height: 100vh;
+  overflow: hidden;
 }
 
 #makeMeScrollable div.scrollableArea {
-  // display: inline;
   float: left;
   /* If you don't want the images in the scroller to be selectable, try the following
     block of code. It's just a nice feature that prevent the images from
@@ -470,13 +469,12 @@ COMBINED ELEMENTS -------------------
 
 .project-number {
   position: absolute;
+  top: 0;
   color: black;
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
   margin: 2.69rem 0 0 2.02rem;
-  font-style: normal;
-  top: 0;
   color: $coral;
   transition: color 0.5s;
 }
@@ -503,7 +501,7 @@ COMBINED ELEMENTS -------------------
   text-transform: uppercase;
   transform: rotate(-90deg);
   transform-origin: 100% 100%;
-  top: 10.5rem;
+  top: 10rem;
   left: -16.1rem;
   color: $coral;
   transition: color 0.5s;
@@ -512,7 +510,6 @@ COMBINED ELEMENTS -------------------
 #VIA-panel {
   img {
     height: 106vh;
-    top: 0;
     transform: translate(-48%, 0%);
     filter: grayscale(100%) contrast(250%) brightness(150%);
     transition: filter 0.5s;
@@ -558,16 +555,14 @@ COMBINED ELEMENTS -------------------
     right: 0;
     bottom: 0;
     margin: auto;
-    filter: brightness(20%);
+    filter: brightness(0%);
     transition: filter 0.5s;
   }
 
   &:hover img {
     filter: brightness(100%);
   }
-}
 
-#SMA-panel {
   .background-colored-panel {
     width: 100%;
     height: 100vh;
@@ -582,21 +577,47 @@ COMBINED ELEMENTS -------------------
 }
 
 .project-panel-wrapper {
+  // img {
+  //   mix-blend-mode: lighten;
+  // }
+  //
+  // &:hover img {
+  //   mix-blend-mode: normal;
+  // }
   .overlay {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: $navy;
+    background-color: lightsteelblue;
     opacity: 0.8;
     transition: opacity 0.5s;
+    mix-blend-mode: multiply;
   }
 
   &:hover .overlay {
     opacity: 0;
   }
+  /* source: https://codepen.io/leincetta/pen/pJyrpg */
+  .blue-img-filter {
+    // img {
+    //   mix-blend-mode: multiply;
+    // }
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $navy;
+    mix-blend-mode: lighten;
+    transition: all ease-in-out 0.5s;
+  }
+
+  &:hover .blue-img-filter {
+    background: black;
+  }
 }
-/* source: https://codepen.io/leincetta/pen/pJyrpg */
+// source: http://webdesignerwall.com/tutorials/create-spotify-colorizer-effects-css-blend-modes
+
 #VIA-panel,
 #intl-coop-panel {
   &:hover .project-name,
@@ -1049,5 +1070,52 @@ footer a {
 @media (max-width: 475px) {
   .content-wrapper {
     padding-right: 2rem;
+  }
+}
+@media (hover:none), (hover:on-demand) {
+  #SMA-panel .background-colored-panel,
+  #SMA-panel img,
+  #VIA-panel img,
+  #intl-coop-panel img,
+  #toyota-panel img {
+    filter: none;
+  }
+
+  #VIA-panel,
+  #intl-coop-panel {
+    .project-name,
+    .project-number {
+      color: black;
+    }
+
+    .line {
+      border-top: 2px dashed black;
+    }
+  }
+
+  #SMA-panel,
+  #toyota-panel {
+    .project-name,
+    .project-number {
+      color: white;
+    }
+
+    .line {
+      border-top: 2px dashed white;
+    }
+  }
+
+  .project-panel-wrapper {
+    .overlay {
+      opacity: 0;
+    }
+
+    .blue-img-filter {
+      background: black;
+    }
+  }
+
+  .back-desktop {
+    display: none;
   }
 }

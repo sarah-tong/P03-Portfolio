@@ -25,56 +25,60 @@ html(lang="en")
               a(class="button-nav" href="about.html") About
             li
               a(class="button-nav" target="_blank" href="http://www.sarahtong.me/Portfolio%20Links/Resume-BandW-SarahTong.pdf") Resume
-        
+
         p(class="short-bio")
           | Hello there, I'm Sarah.
           span 
           | A Vancouver-based user experience designer who tackles challenges with business and design thinking.
-      
+
       div(id="makeMeScrollable")
         div(class="grid-wrapper")
 
           div(class="project-panel-wrapper" id="VIA-panel")
             a(href="VIA.html")
               img(src="img/VIA/VIA-train.jpg" alt="VIA train project image")
+              div(class="blue-img-filter") 
               span(class="overlay")
             div(class="project-detail")
-              h3(class="project-number") 01
+              p(class="project-number") 01
               span(class="line")
               p(class="project-name") VIA Rail
 
           div(class="project-panel-wrapper" id="intl-coop-panel")
             a(href="Intl-Coop.html")
               img(src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
+              div(class="blue-img-filter")
               span(class="overlay")
             div(class="project-detail")
-              h3(class="project-number") 02
+              p(class="project-number") 02
               span(class="line")
               p(class="project-name") International Co-op
-              
+
           div(class="project-panel-wrapper" id="toyota-panel")
-            img(src="img/Toyota/Toyota.png" alt="Toyota automated project image")
+            img(src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
+            div(class="blue-img-filter")
             span(class="overlay")
             div(class="project-detail")
-              h3(class="project-number") 03
+              p(class="project-number") 03
               span(class="line")
               p(class="project-name") Coming Soon
 
           div(class="project-panel-wrapper" id="SMA-panel")
             div(class="background-colored-panel")
             img(src="img/SMA/SMA_Logo.png" alt="SMA logo")
+            div(class="blue-img-filter")
             span(class="overlay")
             div(class="project-detail")
-              h3(class="project-number") 04
+              p(class="project-number") 04
               span(class="line")
               p(class="project-name") Coming Soon
 
     script(src="js/hamburger.js")
 
     //- Smooth Div Scroll Plugin: http://www.smoothdivscroll.com/
-    script(type="text/javascript" src="js/jquery.min.js")
-    script(type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js")
-    script(type="text/javascript" src="js/jquery.mousewheel.min.js")
-    script(type="text/javascript" src="js/jquery.kinetic.min.js")
-    script(type="text/javascript" src="js/jquery.smoothdivscroll-1.3-min.js")
-    script(type="text/javascript" src="js/smooth-div-scroll-initialize.js")
+    script(src="js/jquery.min.js")
+    script(src="js/jquery-ui-1.10.3.custom.min.js")
+    script(src="js/jquery.mousewheel.min.js")
+    script(src="js/jquery.kinetic.js") // minified version 2.2.4 doesn't work
+    script(src="js/jquery.smoothdivscroll-1.3-min.js")
+    script(src="js/smooth-div-scroll-initialize.js")
