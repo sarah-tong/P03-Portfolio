@@ -20,6 +20,7 @@ div.scrollingHotSpotLeft {
   /* cursor: url(../images/cursors/cursor_arrow_left.png), url(../images/cursors/cursor_arrow_left.cur), w-resize; */
   /* custom */
   width: 3.125rem;
+  cursor: w-resize;
 }
 
 /* Visible left hotspot */
@@ -55,6 +56,7 @@ div.scrollingHotSpotRight {
   /* cursor: url(../images/cursors/cursor_arrow_right.png), url(../images/cursors/cursor_arrow_right.cur), e-resize; */
   /* custom */
   width: 3.125rem;
+  cursor: e-resize;
 }
 
 /* Visible right hotspot */
