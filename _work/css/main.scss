@@ -241,6 +241,7 @@ nav li {
 }
 
 .nav-wrapper {
+  // position: fixed;
   min-width: 19.375rem;
   min-height: 100vh;
   -webkit-transition: all 0.3s;
@@ -310,7 +311,7 @@ nav li {
   width: 19.375rem;
   padding: 0 4rem;
   bottom: 5rem;
-  color: $coral;
+  color: black;
 
   span {
     display: block;
@@ -433,6 +434,7 @@ COMBINED ELEMENTS -------------------
 
 /* Styling for product listing */
 #makeMeScrollable {
+  // margin-left: 19.375rem;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -467,44 +469,115 @@ COMBINED ELEMENTS -------------------
   position: absolute;
 }
 
-.project-number {
-  position: absolute;
-  top: 0;
-  color: black;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 2.69rem 0 0 2.02rem;
+.project-detail {
   color: $coral;
-  transition: color 0.5s;
+  transition: color 0.5s, border 0.5s;
 }
 
-.line {
+.project-label-background {
   position: absolute;
-  width: 4.75rem;
-  color: black;
-  border-top: 2px dashed $coral;
-  transform: rotate(-90deg);
-  transform-origin: 100% 100%;
-  top: 6rem;
-  left: -1.5rem;
-  transition: border 0.5s;
+  left: 2.5rem;
+  top: 0;
+  height: 2.5rem;
+  transform-origin: top left;
+  background: black;
+  transform: rotate(90deg);
+
+  #VIA-panel & {
+    width: 21rem;
+  }
+
+  #intl-coop-panel & {
+    width: 28rem;
+  }
+
+  #toyota-panel & {
+    width: 28.75rem;
+  }
+
+  #SMA-panel & {
+    width: 28.75rem;
+  }
+}
+
+.project-number {
+  position: absolute;
+  top: 1.75rem;
+  width: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.25rem 0;
+  letter-spacing: 2px;
+  background: white;
 }
 
 .project-name {
   position: absolute;
   width: 20rem;
-  color: black;
   font-size: 0.875rem;
   font-weight: 600;
-  text-align: right;
   text-transform: uppercase;
+  transform-origin: top left;
+  top: 7rem;
+  left: 1.85rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(90deg);
+}
+
+.line {
+  position: absolute;
+  width: 1.5rem;
+  border-top: 2px dashed $coral;
+  transform-origin: top left;
+  left: 1.25rem;
   transform: rotate(-90deg);
-  transform-origin: 100% 100%;
-  top: 10rem;
-  left: -16.1rem;
-  color: $coral;
-  transition: color 0.5s;
+
+  #VIA-panel & {
+    top: 14.5rem;
+  }
+
+  #intl-coop-panel & {
+    top: 21.5rem;
+  }
+
+  #toyota-panel & {
+    top: 17.5rem;
+  }
+
+  #SMA-panel & {
+    top: 17.5rem;
+  }
+}
+
+.category {
+  position: absolute;
+  width: 20rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  transform-origin: top left;
+  left: 1.85rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(90deg);
+
+  #VIA-panel & {
+    top: 15rem;
+  }
+
+  #intl-coop-panel & {
+    top: 22rem;
+  }
+
+  #toyota-panel & {
+    top: 18rem;
+  }
+
+  #SMA-panel & {
+    top: 18rem;
+  }
 }
 
 #VIA-panel {
@@ -615,25 +688,14 @@ COMBINED ELEMENTS -------------------
   &:hover .blue-img-filter {
     background: black;
   }
-}
-// source: http://webdesignerwall.com/tutorials/create-spotify-colorizer-effects-css-blend-modes
-
-#VIA-panel,
-#intl-coop-panel {
-  &:hover .project-name,
+  // source: http://webdesignerwall.com/tutorials/create-spotify-colorizer-effects-css-blend-modes
   &:hover .project-number {
     color: black;
   }
 
-  &:hover .line {
-    border-top: 2px dashed black;
-  }
-}
-
-#SMA-panel,
-#toyota-panel {
-  &:hover .project-name,
-  &:hover .project-number {
+  ,
+   &:hover .category,
+  &:hover .project-name {
     color: white;
   }
 
@@ -701,6 +763,10 @@ COMBINED ELEMENTS -------------------
   background-color: #3057D5;
 }
 /* Project page styling */
+// .page-wrapper {
+//   margin-left: 19.375rem;
+// }
+
 .project-wrapper section {
   width: 100%;
   margin: 0 0 6rem;
@@ -732,8 +798,12 @@ COMBINED ELEMENTS -------------------
   margin-top: 1.75rem;
 }
 
-section:first-of-type {
+.page-wrapper section, #bio-wrapper section {
   margin-top: 9rem;
+
+  p {
+    margin-top: 1rem;
+  }
 }
 
 .brief-description {
@@ -996,6 +1066,18 @@ footer a {
   line-height: 2rem;
 }
 /* Media Queries */
+@media (min-width: 1500px) {
+  .project-panel-wrapper {
+    min-width: 19.375rem;
+    width: auto;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  #toyota-panel img {
+    transform: translate(-8%, 0%);
+  }
+}
 @media (max-width: 1118px) {
   .content-wrapper {
     max-width: 100%;
@@ -1047,11 +1129,11 @@ footer a {
     visibility: visible;
     top: 0;
     left: 0;
-  }
 
-  .mobile-nav.toggle {
-    top: 0;
-    left: 15.5rem;
+    &.toggle {
+      top: 0;
+      left: 15.5rem;
+    }
   }
   // .nav-wrapper.open {
   //   margin-left: -16.6875rem;
@@ -1061,11 +1143,20 @@ footer a {
   // }
   .nav-wrapper {
     margin-left: -16.6875rem;
+
+    &.toggle {
+      margin-left: 0;
+    }
   }
 
-  .nav-wrapper.toggle {
-    margin-left: 0;
-  }
+  // #makeMeScrollable,
+  // .page-wrapper {
+  //   margin-left: 2.6875rem;
+  // }
+
+  // &.toggle {
+  //   margin-left: 19.375rem;
+  // }
 }
 @media (max-width: 475px) {
   .content-wrapper {
@@ -1081,29 +1172,29 @@ footer a {
     filter: none;
   }
 
-  #VIA-panel,
-  #intl-coop-panel {
-    .project-name,
-    .project-number {
-      color: black;
-    }
-
-    .line {
-      border-top: 2px dashed black;
-    }
-  }
-
-  #SMA-panel,
-  #toyota-panel {
-    .project-name,
-    .project-number {
-      color: white;
-    }
-
-    .line {
-      border-top: 2px dashed white;
-    }
-  }
+  // #VIA-panel,
+  // #intl-coop-panel {
+  //   .project-name,
+  //   .project-number {
+  //     color: black;
+  //   }
+  //
+  //   .line {
+  //     border-top: 2px dashed black;
+  //   }
+  // }
+  //
+  // #SMA-panel,
+  // #toyota-panel {
+  //   .project-name,
+  //   .project-number {
+  //     color: white;
+  //   }
+  //
+  //   .line {
+  //     border-top: 2px dashed white;
+  //   }
+  // }
 
   .project-panel-wrapper {
     .overlay {
