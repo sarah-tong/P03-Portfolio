@@ -7,6 +7,7 @@ console.log("Window width: " + windowWidth);
 
 var navToggle = document.querySelector(".mobile-nav");
 var navWrapper = document.querySelector(".nav-wrapper");
+// var pageWrapper = document.querySelector(".page-wrapper");
 
 
 // if (windowWidth > 768) {
@@ -22,7 +23,7 @@ var navWrapper = document.querySelector(".nav-wrapper");
 navToggle.addEventListener("click", function() {
   navToggle.classList.toggle("toggle");
   navWrapper.classList.toggle("toggle");
-
+  // pageWrapper.classList.toggle("toggle");
   // if (navToggle.classList.contains("open")) {
   //   console.log("#mobile-nav open, now closed.");
   //
