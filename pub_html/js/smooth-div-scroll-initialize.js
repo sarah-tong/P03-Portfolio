@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   if ($(window).width() < 768) {
     $('#makeMeScrollable').smoothDivScroll({
-      visibleHotSpotBackgrounds: "always"
+      visibleHotSpotBackgrounds: ""
     });
   }
 });
