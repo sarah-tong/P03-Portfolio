@@ -239,7 +239,7 @@ nav li {
   position: absolute;
   width: 19.375rem;
   padding: 0 4rem;
-  top: 26rem;
+  bottom: 3rem;
   color: black;
 
   span {
@@ -754,6 +754,7 @@ COMBINED ELEMENTS -------------------
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .flex-content-wrapper video {
@@ -991,9 +992,8 @@ footer a {
   }
 
   .content-wrapper.flex-content-wrapper,
-  .left-side,
   .overview .left-side,
-  .overview .right-side,
+  .overview .right-side, .left-side,
   .right-side {
     display: block;
     width: 100%;
@@ -1011,10 +1011,6 @@ footer a {
   .overview .content-wrapper {
     padding-bottom: 0;
     border-bottom: none;
-  }
-
-  .left-side {
-    padding-right: 0;
   }
 
   #profile-picture {
@@ -1053,6 +1049,10 @@ footer a {
     }
   }
 
+  .left-side {
+    padding-right: 0;
+  }
+
   .flex-content-wrapper img,
   .flex-content-wrapper video {
     display: block;
@@ -1060,6 +1060,7 @@ footer a {
     margin: 1rem auto 2rem;
   }
 
+  .flex-content-wrapper,
   .img-wrapper.flex-content-wrapper,
   .img-wrapper.flex-content-wrapper .left-side,
   .img-wrapper.flex-content-wrapper .right-side {
