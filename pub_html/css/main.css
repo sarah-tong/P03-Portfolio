@@ -117,20 +117,7 @@ nav li {
   border: 1px solid transparent;
   padding: 0;
   background: transparent;
-  -webkit-transition: top 0.3s ease, left 0.3s ease;
-  -o-transition: top 0.3s ease, left 0.3s ease;
-  transition: top 0.3s ease, left 0.3s ease;
-  z-index: 9;
   visibility: hidden; }
-  .mobile-nav.open {
-    top: 2.8rem;
-    left: 3.4rem; }
-  .mobile-nav.close {
-    top: 0;
-    left: 0; }
-  .mobile-nav.toggle {
-    left: 0;
-    top: 0; }
 
 .mobile-nav span {
   width: 1.375rem;
@@ -178,18 +165,13 @@ nav li {
   padding: 0 2.25rem 1.85rem 4rem; }
 
 .nav-wrapper {
+  position: fixed;
   min-width: 19.375rem;
   min-height: 100vh;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: margin 0.3s;
+  -o-transition: margin 0.3s;
+  transition: margin 0.3s;
   letter-spacing: 1px; }
-  .nav-wrapper.open {
-    margin-left: 0; }
-  .nav-wrapper.close {
-    margin-left: -16.6875rem; }
-  .nav-wrapper.toggle {
-    margin-left: -16.6875rem; }
 
 /* logo */
 .logo {
@@ -242,30 +224,12 @@ nav li {
   position: absolute;
   width: 19.375rem;
   padding: 0 4rem;
-  bottom: 5rem;
+  top: 26rem;
   color: black; }
   .short-bio span {
     display: block;
     width: 1rem;
     height: 2rem; }
-
-/* back button */
-li.back-desktop {
-  position: fixed;
-  bottom: 5rem;
-  padding-bottom: 0; }
-  li.back-desktop a {
-    color: transparent;
-    visibility: hidden;
-    -webkit-transition: color 0.5s, visibility 1s;
-    -o-transition: color 0.5s, visibility 1s;
-    transition: color 0.5s, visibility 1s; }
-    li.back-desktop a.show {
-      color: #EF6362;
-      visibility: visible; }
-    li.back-desktop a.hide {
-      color: transparent;
-      visibility: hidden; }
 
 /* Styling for cta buttons */
 .cta-button {
@@ -354,21 +318,15 @@ ul {
 COMBINED ELEMENTS -------------------
 
 /* Styling for product listing */
-#makeMeScrollable {
+#project-gallery {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden; }
 
-#makeMeScrollable div.scrollableArea {
-  float: left;
-  /* If you don't want the images in the scroller to be selectable, try the following
-    block of code. It's just a nice feature that prevent the images from
-    accidentally becoming selected/inverted when the user interacts with the scroller. */ }
-
 .project-panel-wrapper {
   width: 19.375rem;
-  min-height: 100vh;
+  min-height: 100%;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden; }
@@ -398,13 +356,13 @@ COMBINED ELEMENTS -------------------
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
   #VIA-panel .project-label-background {
-    width: 21rem; }
+    width: 26rem; }
   #intl-coop-panel .project-label-background {
-    width: 28rem; }
+    width: 30rem; }
   #toyota-panel .project-label-background {
-    width: 28.75rem; }
+    width: 26.5rem; }
   #SMA-panel .project-label-background {
-    width: 28.75rem; }
+    width: 36rem; }
 
 .project-number {
   position: absolute;
@@ -426,7 +384,7 @@ COMBINED ELEMENTS -------------------
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  top: 7rem;
+  top: 6rem;
   left: 1.85rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -444,13 +402,13 @@ COMBINED ELEMENTS -------------------
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
   #VIA-panel .line {
-    top: 14.5rem; }
+    top: 13.5rem; }
   #intl-coop-panel .line {
-    top: 21.5rem; }
+    top: 20.5rem; }
   #toyota-panel .line {
-    top: 17.5rem; }
+    top: 13.5rem; }
   #SMA-panel .line {
-    top: 17.5rem; }
+    top: 26.5rem; }
 
 .category {
   position: absolute;
@@ -466,13 +424,13 @@ COMBINED ELEMENTS -------------------
   -ms-transform: rotate(-90deg);
   transform: rotate(90deg); }
   #VIA-panel .category {
-    top: 15rem; }
+    top: 14rem; }
   #intl-coop-panel .category {
-    top: 22rem; }
+    top: 21rem; }
   #toyota-panel .category {
-    top: 18rem; }
+    top: 14rem; }
   #SMA-panel .category {
-    top: 18rem; }
+    top: 27rem; }
 
 #VIA-panel img {
   height: 106vh;
@@ -616,8 +574,7 @@ COMBINED ELEMENTS -------------------
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   -webkit-box-flex: 1;
-  flex: 1 1 50%;
-  /*    margin: 0 2rem;*/ }
+  flex: 1 1 50%; }
 
 /* Color swatches */
 .colour-swatch {
@@ -651,6 +608,12 @@ COMBINED ELEMENTS -------------------
   background-color: #3057D5; }
 
 /* Project page styling */
+.main-content-wrapper {
+  margin-left: 19.375rem;
+  -webkit-transition: margin 0.5s;
+  -o-transition: margin 0.5s;
+  transition: margin 0.5s; }
+
 .project-wrapper section {
   width: 100%;
   margin: 0 0 6rem; }
@@ -679,9 +642,9 @@ COMBINED ELEMENTS -------------------
 .project-wrapper h4 {
   margin-top: 1.75rem; }
 
-.page-wrapper section, #bio-wrapper section {
+.main-content-wrapper section {
   margin-top: 9rem; }
-  .page-wrapper section p, #bio-wrapper section p {
+  .main-content-wrapper section p {
     margin-top: 1rem; }
 
 .brief-description {
@@ -952,14 +915,18 @@ footer a {
   .mobile-nav {
     visibility: visible;
     top: 0;
-    left: 0; }
+    left: 16.6875rem; }
     .mobile-nav.toggle {
       top: 0;
       left: 15.5rem; }
   .nav-wrapper {
     margin-left: -16.6875rem; }
     .nav-wrapper.toggle {
-      margin-left: 0; } }
+      margin-left: 0; }
+  .main-content-wrapper {
+    margin-left: 2.6875rem; }
+    .main-content-wrapper.toggle {
+      margin-left: 19.375rem; } }
 
 @media (max-width: 475px) {
   .content-wrapper {
@@ -976,6 +943,4 @@ footer a {
   .project-panel-wrapper .overlay {
     opacity: 0; }
   .project-panel-wrapper .blue-img-filter {
-    background: black; }
-  .back-desktop {
-    display: none; } }
+    background: black; } }

@@ -20,11 +20,6 @@ body {
   line-height: 1.5;
   letter-spacing: 1px;
 }
-// section:not([id]) {
-//   margin: 1em 0;
-//   padding: 0.5em 0;
-//   border-top: 0.15em solid #333;
-// }
 
 section[id]:first-of-type {
   margin-top: 5rem;
@@ -70,24 +65,15 @@ INTERACTIVE ELEMENTS -------------------
     content: '';
     width: 100%;
     height: 2px;
-    // background-color: $coral;
     transition: all 250ms;
     content: "";
-    // border-bottom: 2px dashed $coral;
     background-color: white;
   }
 }
 
 .in-text-link:hover {
-  // color: white;
   font-weight: 800;
   border-bottom: 2px dashed $coral;
-
-  &:after {
-    // height: 160%;
-    // width: 101%;
-    // width: 100%;
-  }
 }
 /* Styling for the navigation button */
 nav ul {
@@ -134,24 +120,6 @@ nav li {
     }
   }
 }
-// .button-nav:before {
-//   &.active {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     left: 0;
-//     bottom: -0.25rem;
-//     border-bottom: 2px dashed $coral;
-//   }
-// }
-// .button-nav:hover:before {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   left: 0;
-//   bottom: -0.25rem;
-//   border-bottom: 2px dashed $coral;
-// }
 /*  Styling for mobile nav button */
 .mobile-nav {
   position: absolute;
@@ -163,24 +131,7 @@ nav li {
   border: 1px solid transparent;
   padding: 0;
   background: transparent;
-  transition: top 0.3s ease, left 0.3s ease;
-  z-index: 9;
   visibility: hidden;
-
-  &.open {
-    top: 2.8rem;
-    left: 3.4rem;
-  }
-
-  &.close {
-    top: 0;
-    left: 0;
-  }
-
-  &.toggle {
-    left: 0;
-    top: 0;
-  }
 }
 
 .mobile-nav span {
@@ -230,36 +181,14 @@ nav li {
   padding: 0 2.25rem 1.85rem 4rem;
 }
 
-.main-nav a {
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -5px;
-  //   width: 100%;
-  //   border-bottom: 2px dashed $coral;
-  // }
-}
-
 .nav-wrapper {
-  // position: fixed;
+  position: fixed;
   min-width: 19.375rem;
   min-height: 100vh;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: margin 0.3s;
+  -o-transition: margin 0.3s;
+  transition: margin 0.3s;
   letter-spacing: 1px;
-
-  &.open {
-    margin-left: 0;
-  }
-
-  &.close {
-    margin-left: -16.6875rem;
-  }
-
-  &.toggle {
-    margin-left: -16.6875rem;
-  }
 }
 /* logo */
 .logo {
@@ -310,7 +239,7 @@ nav li {
   position: absolute;
   width: 19.375rem;
   padding: 0 4rem;
-  bottom: 5rem;
+  top: 26rem;
   color: black;
 
   span {
@@ -319,28 +248,7 @@ nav li {
     height: 2rem;
   }
 }
-/* back button */
-li.back-desktop {
-  position: fixed;
-  bottom: 5rem;
-  padding-bottom: 0;
 
-  a {
-    color: transparent;
-    visibility: hidden;
-    transition: color 0.5s, visibility 1s;
-
-    &.show {
-      color: $coral;
-      visibility: visible;
-    }
-
-    &.hide {
-      color: transparent;
-      visibility: hidden;
-    }
-  }
-}
 /* Styling for cta buttons */
 .cta-button {
   position: relative;
@@ -433,33 +341,19 @@ ul {
 COMBINED ELEMENTS -------------------
 
 /* Styling for product listing */
-#makeMeScrollable {
-  // margin-left: 19.375rem;
+#project-gallery {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-#makeMeScrollable div.scrollableArea {
-  float: left;
-  /* If you don't want the images in the scroller to be selectable, try the following
-    block of code. It's just a nice feature that prevent the images from
-    accidentally becoming selected/inverted when the user interacts with the scroller. */
-  // -webkit-user-select: none;
-  // -khtml-user-select: none;
-  // -moz-user-select: none;
-  // -o-user-select: none;
-  // user-select: none;
-}
-
 .project-panel-wrapper {
   width: 19.375rem;
-  min-height: 100vh;
+  min-height: 100%;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
-  // margin-left: -267px;
 }
 
 .project-panel-wrapper a {
@@ -484,19 +378,19 @@ COMBINED ELEMENTS -------------------
   transform: rotate(90deg);
 
   #VIA-panel & {
-    width: 21rem;
+    width: 26rem;
   }
 
   #intl-coop-panel & {
-    width: 28rem;
+    width: 30rem;
   }
 
   #toyota-panel & {
-    width: 28.75rem;
+    width: 26.5rem;
   }
 
   #SMA-panel & {
-    width: 28.75rem;
+    width: 36rem;
   }
 }
 
@@ -519,7 +413,7 @@ COMBINED ELEMENTS -------------------
   font-weight: 600;
   text-transform: uppercase;
   transform-origin: top left;
-  top: 7rem;
+  top: 6rem;
   left: 1.85rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -535,19 +429,19 @@ COMBINED ELEMENTS -------------------
   transform: rotate(-90deg);
 
   #VIA-panel & {
-    top: 14.5rem;
+    top: 13.5rem;
   }
 
   #intl-coop-panel & {
-    top: 21.5rem;
+    top: 20.5rem;
   }
 
   #toyota-panel & {
-    top: 17.5rem;
+    top: 13.5rem;
   }
 
   #SMA-panel & {
-    top: 17.5rem;
+    top: 26.5rem;
   }
 }
 
@@ -564,19 +458,19 @@ COMBINED ELEMENTS -------------------
   transform: rotate(90deg);
 
   #VIA-panel & {
-    top: 15rem;
+    top: 14rem;
   }
 
   #intl-coop-panel & {
-    top: 22rem;
+    top: 21rem;
   }
 
   #toyota-panel & {
-    top: 18rem;
+    top: 14rem;
   }
 
   #SMA-panel & {
-    top: 18rem;
+    top: 27rem;
   }
 }
 
@@ -650,13 +544,6 @@ COMBINED ELEMENTS -------------------
 }
 
 .project-panel-wrapper {
-  // img {
-  //   mix-blend-mode: lighten;
-  // }
-  //
-  // &:hover img {
-  //   mix-blend-mode: normal;
-  // }
   .overlay {
     position: absolute;
     top: 0;
@@ -673,9 +560,6 @@ COMBINED ELEMENTS -------------------
   }
   /* source: https://codepen.io/leincetta/pen/pJyrpg */
   .blue-img-filter {
-    // img {
-    //   mix-blend-mode: multiply;
-    // }
     position: absolute;
     top: 0;
     height: 100%;
@@ -709,7 +593,6 @@ COMBINED ELEMENTS -------------------
   display: flex;
   width: 100%;
   overflow: hidden;
-  // margin-bottom: 1rem;
 }
 
 .column-1-of-4 {
@@ -721,7 +604,6 @@ COMBINED ELEMENTS -------------------
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
-  /*    margin: 0 2rem;*/
 }
 /* Color swatches */
 .colour-swatch {
@@ -763,9 +645,10 @@ COMBINED ELEMENTS -------------------
   background-color: #3057D5;
 }
 /* Project page styling */
-// .page-wrapper {
-//   margin-left: 19.375rem;
-// }
+.main-content-wrapper {
+  margin-left: 19.375rem;
+  transition: margin 0.5s;
+}
 
 .project-wrapper section {
   width: 100%;
@@ -798,7 +681,7 @@ COMBINED ELEMENTS -------------------
   margin-top: 1.75rem;
 }
 
-.page-wrapper section, #bio-wrapper section {
+.main-content-wrapper section {
   margin-top: 9rem;
 
   p {
@@ -1117,30 +1000,17 @@ footer a {
   }
 }
 @media (max-width: 768px) {
-  // .mobile-nav.open {
-  //   top: 0;
-  //   left: 0;
-  // }
-  // .mobile-nav.close {
-  //   top: 0;
-  //   left: 0;
-  // }
   .mobile-nav {
     visibility: visible;
     top: 0;
-    left: 0;
+    left: 16.6875rem;
 
     &.toggle {
       top: 0;
       left: 15.5rem;
     }
   }
-  // .nav-wrapper.open {
-  //   margin-left: -16.6875rem;
-  // }
-  // .nav-wrapper.close {
-  //   margin-left: -16.6875rem;
-  // }
+
   .nav-wrapper {
     margin-left: -16.6875rem;
 
@@ -1149,14 +1019,13 @@ footer a {
     }
   }
 
-  // #makeMeScrollable,
-  // .page-wrapper {
-  //   margin-left: 2.6875rem;
-  // }
+  .main-content-wrapper {
+    margin-left: 2.6875rem;
 
-  // &.toggle {
-  //   margin-left: 19.375rem;
-  // }
+    &.toggle {
+      margin-left: 19.375rem;
+    }
+  }
 }
 @media (max-width: 475px) {
   .content-wrapper {
@@ -1172,30 +1041,6 @@ footer a {
     filter: none;
   }
 
-  // #VIA-panel,
-  // #intl-coop-panel {
-  //   .project-name,
-  //   .project-number {
-  //     color: black;
-  //   }
-  //
-  //   .line {
-  //     border-top: 2px dashed black;
-  //   }
-  // }
-  //
-  // #SMA-panel,
-  // #toyota-panel {
-  //   .project-name,
-  //   .project-number {
-  //     color: white;
-  //   }
-  //
-  //   .line {
-  //     border-top: 2px dashed white;
-  //   }
-  // }
-
   .project-panel-wrapper {
     .overlay {
       opacity: 0;
@@ -1204,9 +1049,5 @@ footer a {
     .blue-img-filter {
       background: black;
     }
-  }
-
-  .back-desktop {
-    display: none;
   }
 }
