@@ -34,7 +34,7 @@ html(lang="en")
           span 
           | A Vancouver-based user experience designer who tackles challenges with business and design thinking.
 
-      div(class="main-content-wrapper" id="makeMeScrollable")
+      div(class="main-content-wrapper" id="project-gallery")
         div(class="grid-wrapper swiper-container")
           div(class="swiper-wrapper")
 
@@ -50,6 +50,17 @@ html(lang="en")
                 p(class="project-name") VIA Rail
                 p(class="category") Interface Design
             
+            div(class="project-panel-wrapper swiper-slide" id="toyota-panel")
+              img(src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
+              div(class="blue-img-filter")
+              span(class="overlay")
+              div(class="project-detail")
+                div(class="project-label-background")
+                p(class="project-number") 02
+                span(class="line")
+                p(class="project-name") Toyota
+                p(class="category") Interface Design
+            
             div(class="project-panel-wrapper swiper-slide" id="intl-coop-panel")
               a(href="Intl-Coop.html")
                 img(src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
@@ -57,21 +68,10 @@ html(lang="en")
                 span(class="overlay")
               div(class="project-detail")
                 div(class="project-label-background")
-                p(class="project-number") 02
+                p(class="project-number") 03
                 span(class="line")
                 p(class="project-name") International Co-op
                 p(class="category") Marketing
-            
-            div(class="project-panel-wrapper swiper-slide" id="toyota-panel")
-              img(src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
-              div(class="blue-img-filter")
-              span(class="overlay")
-              div(class="project-detail")
-                div(class="project-label-background")
-                p(class="project-number") 03
-                span(class="line")
-                p(class="project-name") Toyota
-                p(class="category") Interface Design
             
             div(class="project-panel-wrapper swiper-slide" id="SMA-panel")
               div(class="background-colored-panel")
@@ -85,8 +85,8 @@ html(lang="en")
                 p(class="project-name") Student Marketing Association
                 p(class="category") Marketing
                 
-          div(class="swiper-button-prev")
-          div(class="swiper-button-next")
+          div(class="swiper-button-prev") &#8592;
+          div(class="swiper-button-next") &#8594;
 
     script(src="js/hamburger.js")
 
