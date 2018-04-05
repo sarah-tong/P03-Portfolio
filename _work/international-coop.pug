@@ -9,7 +9,7 @@ html(lang="en")
     link(rel="stylesheet" href="css/main.css")
     link(rel="stylesheet" href="css/normalize.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i")
-
+    link(rel="stylesheet" href="css/zoom.css")
 
   body
     div(class="grid-wrapper")
@@ -35,7 +35,7 @@ html(lang="en")
                 img(src="img/Intl-Coop/Website_Carousel.png")
           
           section(class="overview") 
-            div(class="content-wrapper flex-content-wrapper")
+            div(class="content-wrapper flex-content-wrapper" data-action="zoom")
               div(class="left-side")
                 h2 Overview
                 p Simon Fraser University (SFU)’s Co-operative Education program (also known as Co-op) supports students in gaining paid work experience to augment their academic studies. I worked for the International Co-op department which provides students with the opportunity to undertake a Co-op outside of Canada. 
@@ -62,15 +62,17 @@ html(lang="en")
               
               div(class="subsection")
                 h3 Info Sessions
-                div(class="img-wrapper flex-img-wrapper ")
-                  img(src="img/Intl-Coop/infosessionpromo_Co-op%20Japan.png")
-                  img(src="img/Intl-Coop/infosessionpromo_Intl%20Co-op.png")
+                div(class="img-wrapper flex-content-wrapper")
+                  div(class="left-side")
+                    img(src="img/Intl-Coop/infosessionpromo_Co-op%20Japan.png" data-action="zoom")
+                  div(class="right-side")  
+                    img(src="img/Intl-Coop/infosessionpromo_Intl%20Co-op.png" data-action="zoom")
                 p Info sessions are another resource that provides students with in-depth information on specific internationally-focused internship programs. I promoted multiple info sessions throughout the semester via email marketing and social media, which included SFU Co-op’s Facebook, Twitter, and Instagram. Promotion generally involved researching about the subject of discussion; scheduling dates and location; creating graphics and written material; updating slide deck presentations; and creating and printing all necessary handouts. Occasionally, I have taken up roles as a speaker and videographer at some info sessions.
             
               div(class="subsection")
                 h3 Bridging Online Learning
                 div(class="img-wrapper")
-                  img(src="img/Intl-Coop/BIL%20Infographic%20-%20Fall%202016_Work%20Term%20Requirements.png")
+                  img(src="img/Intl-Coop/BIL%20Infographic%20-%20Fall%202016_Work%20Term%20Requirements.png"  data-action="zoom")
                 p Communicating to prospective students is important, but communication to those already abroad was also key. I was tasked to improve the visual communication in an online curriculum, namely Bridging Online Learning (BIL), for students on International Co-op. On BIL, information was dense and the lack of hierarchy made it difficult to navigate through. This was confirmed by the multiple student emails seeking clarification and the end-of-work term deliverables that were incorrectly submitted. To address this, I created infographics and other visual elements, restructuring written content and refreshing web page aesthetics to improve readability. Emails have noticeably reduced, though by how much was at the time too soon to determine as my BIL project was completed toward the end of my work term.  
           
           section
@@ -84,7 +86,7 @@ html(lang="en")
               div(class="subsection")
                 h3 Mitacs
                 div(class="img-wrapper")
-                  img(src="img/Intl-Coop/mitacs-screenshot.png")
+                  img(src="img/Intl-Coop/mitacs-screenshot.png" data-action="zoom")
                 p 
                   | To create the 
                   a(class="in-text-link" href="https://www.sfu.ca/coop/international/mitacs-research-award/") “Mitacs”
@@ -95,16 +97,18 @@ html(lang="en")
               div(class="subsection")
                 h3 Travel Smart
                 div(class="img-wrapper")
-                  img(src="img/Intl-Coop/travel-smart-screenshot.png")
+                  img(src="img/Intl-Coop/travel-smart-screenshot.png" data-action="zoom")
                 p
                   a(class="in-text-link" href="http://www.sfu.ca/coop/international/travel-smart.html") “Travel Smart”
                   |  is also a new page that was born from existing information that was once scattered in various pages on the International Co-op website. To better digest these resources, I chunked the information into 4 groups: Good Reads, Financial Advice, and Housing Resources.
               
               div(class="subsection")
                 h3 Improving Accessibility
-                div(class="img-wrapper flex-img-wrapper")
-                  img(src="img/Intl-Coop/Travel%20Smart%20Banners_Side%20Banner.png")
-                  img(src="img/Intl-Coop/Country%20Profiles%20Side%20Banner-01.png")
+                div(class="img-wrapper flex-content-wrapper")
+                  div(class="left-side")
+                    img(src="img/Intl-Coop/Travel%20Smart%20Banners_Side%20Banner.png" data-action="zoom")
+                  div(class="right-side")  
+                    img(src="img/Intl-Coop/Country%20Profiles%20Side%20Banner-01.png" data-action="zoom")
                 p 
                   | As seen on the 
                   a(class="in-text-link" href="http://www.sfu.ca/coop/international/travel-smart.html") “Travel Smart”
@@ -112,11 +116,13 @@ html(lang="en")
                   a(class="in-text-link" href="http://www.sfu.ca/coop/international/go-self-directed.html") “Go Self-Directed”
                   |  page, I created graphics for the sidebar to better assist website users to access additional information. As “Travel Smart” currently contains links to various blogs, it was an appropriate place to direct users to SFU’s blog, called “Our Learning Community” (OLC). For “Go-Self Directed”, a long button initially spanned across the page that directed to another web page. Upon browsing this page, I noticed that I had overlooked the button and mistaken it for a header. I created a new sidebar section to draw greater emphasis to this link.              
               
-              div(class="subsection")
+              div(class="subsection" id="discover-and-share")
                 h3 Discover &amp; Share
-                div(class="img-wrapper flex-img-wrapper")
-                  img(src="img/Intl-Coop/discover&share-01.png")
-                  img(src="img/Intl-Coop/Wireframes.png")
+                div(class="img-wrapper flex-content-wrapper")
+                  div(class="left-side")
+                    img(src="img/Intl-Coop/discover&share-01.png" data-action="zoom")
+                  div(class="right-side")
+                    img(src="img/Intl-Coop/Wireframes.png" data-action="zoom")
                 p
                   | Web coding and design was one skill I wanted to improve upon and so I challenged myself to undertake a larger scale project to improve the user experience of the International Co-op website. Upon browsing it, I noticed contest pages, YouTube videos, and blog posts capturing students’ International Work stories were scattered throughout the website, making it difficult to find and access these important resources. My solution is to consolidate these resources to one access point. Following a few rough wireframe sketches and HTML/CSS coding within Adobe Experience Manager, 
                   a(class="in-text-link" href="https://www.sfu.ca/coop/international/discover-and-share.html") “Discover &amp; Share”
@@ -136,16 +142,18 @@ html(lang="en")
               div(class="subsection")
                 h3 A Taste of International Co-op
                 div(class="img-wrapper")
-                  img(src="img/Intl-Coop/ContestPage-TasteOfIntlCoop.png")
-                div(class="img-wrapper flex-img-wrapper")
-                  img(src="img/Intl-Coop/FBPhotoContestPromo-2.png")
-                  img(src="img/Intl-Coop/FBPhotoContest_countdown.png")
+                  img(src="img/Intl-Coop/ContestPage-TasteOfIntlCoop.png" data-action="zoom")
+                div(class="img-wrapper flex-content-wrapper")
+                  div(class="left-side")
+                    img(src="img/Intl-Coop/FBPhotoContestPromo-2.png" data-action="zoom")
+                  div(class="right-side")
+                    img(src="img/Intl-Coop/FBPhotoContest_countdown.png" data-action="zoom")
                 p As it is SFU’s vision to engage students, I was responsible for creating contests to engage with students who have been, or at the present time, working abroad. The first contest I created, called “A Taste of International Co-op”, was a photo contest to encourage students to share their favourite foods from their host country. Executing the promotion and managing the contest from beginning to end was the least challenging aspect. What was challenging was ideating a contest theme; arranging contest rules and regulations; planning how the winner will be chosen, what the prizes will be, and how long the contest will run; strategizing a social media action plan; and recording and measuring success. All these considerations were put into a written and verbal proposal to my supervisor. Although the number of submissions were less than ideal likely due to contest rules that created barriers to entry, I reflected and written about my learning experience to not only assist future Co-op students, but more importantly to reach personal success for my second contest.
           
                 div(class="subsection")
                   h3 My Co-op Journey. My Story.
                   div(class="img-wrapper")
-                    img(src="img/Intl-Coop/ContestPage-MyCoopStory.png")
+                    img(src="img/Intl-Coop/ContestPage-MyCoopStory.png" data-action="zoom")
                   p I organized a second contest to address a few things: I learned that blog submissions to the OLC has slowed; our video vault of student interviews needed more recent footage; and I wanted more videography and editing experience. The second contest, called “My Co-op Journey. My Story.”, aims to generate more blog and video content for International Co-op. Learning from my last experience, what I did differently was relaxing contest rules to reduce barriers to entry and increasing my target audience. As a result, I was excited to see that submissions have increased by more than two-fold. In hopes of improving success for future Co-op students, I have written out my reflections once again.
           
           section
@@ -157,3 +165,6 @@ html(lang="en")
           include footer.pug
                      
   script(src="js/hamburger.js")
+  script(src="js/jquery-3.3.1.min.js")
+  script(src="js/transition.js")
+  script(src="js/zoom.js")
