@@ -121,7 +121,7 @@ nav li {
   }
 }
 /*  Styling for mobile nav button */
-.mobile-nav {
+.hamburger-menu {
   position: absolute;
   top: 2.8rem;
   left: 3.4rem;
@@ -134,7 +134,7 @@ nav li {
   visibility: hidden;
 }
 
-.mobile-nav span {
+.hamburger-menu span {
   width: 1.375rem;
   height: 0.1875rem;
   display: block;
@@ -147,7 +147,7 @@ nav li {
   margin: 0 0.6rem 0.3rem;
 }
 
-.mobile-nav.toggle span {
+.hamburger-menu.toggle span {
   margin: 0 auto;
 
   &:first-of-type {
@@ -248,7 +248,6 @@ nav li {
     height: 2rem;
   }
 }
-
 /* Styling for cta buttons */
 .cta-button {
   position: relative;
@@ -313,6 +312,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -323,7 +323,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 /* Styling for bulleted lists */
@@ -685,7 +685,7 @@ COMBINED ELEMENTS -------------------
   margin-top: 9rem;
 
   p {
-    margin-top: 1rem;
+    margin: 1rem 0 2rem;
   }
 }
 
@@ -761,6 +761,11 @@ COMBINED ELEMENTS -------------------
   width: 100%;
   height: 100%;
 }
+
+.flex-content-wrapper video {
+  margin-top: 1rem;
+  width: 100%;
+}
 /* footer */
 footer {
   margin: 6rem 0 5rem;
@@ -797,6 +802,7 @@ footer a {
     border-bottom: 2px dashed #EF6362;
   }
 }
+
 /* VIA styling */
 #VIA-business-problem-img,
 #VIA-customer-segment-img {
@@ -810,6 +816,32 @@ footer a {
 #VIA-solution .img-wrapper:first-of-type {
   margin-top: 1.75rem;
 }
+/* Toyota styling */
+#toyota-business-problem-img {
+  padding: 5rem 1rem;
+}
+
+#toyota-prototype .flex-content-wrapper .right-side p {
+  margin-top: 3.25rem;
+}
+
+#speculative-solution .flex-content-wrapper {
+  margin-top: 2rem;
+}
+
+/* SMA styling */
+#SMA-banner {
+    display: flex;
+    position: relative;
+    background: #4696CC;
+    height: 27rem;
+}
+
+#SMA-banner img {
+    width: 10rem;
+    margin: auto auto;
+}
+
 /* Bio styling */
 #bio-wrapper p span {
   font-weight: 800;
@@ -968,11 +1000,8 @@ footer a {
   }
 
   .flex-content-wrapper,
-  .flex-img-wrapper,
-  .left-side,
   .overview .left-side,
-  .overview .right-side,
-  .right-side {
+  .overview .right-side, .left-side, .right-side {
     display: block;
     width: 100%;
   }
@@ -998,9 +1027,20 @@ footer a {
   #profile-picture {
     margin-bottom: 4rem;
   }
+
+  #toyota-prototype .flex-content-wrapper .right-side p {
+    margin-top: 1rem;
+  }
+
+  .flex-content-wrapper img,
+  .flex-content-wrapper video {
+    display: block;
+    width: 50%;
+    margin: 1rem auto 2rem;
+  }
 }
 @media (max-width: 768px) {
-  .mobile-nav {
+  .hamburger-menu {
     visibility: visible;
     top: 0;
     left: 16.6875rem;
@@ -1025,6 +1065,11 @@ footer a {
     &.toggle {
       margin-left: 19.375rem;
     }
+  }
+
+  .flex-img-wrapper {
+    display: block;
+    width: 100%;
   }
 }
 @media (max-width: 475px) {
