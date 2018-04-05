@@ -640,6 +640,12 @@ COMBINED ELEMENTS -------------------
 .left-side {
   padding-right: 4rem; }
 
+.img-wrapper.flex-content-wrapper .left-side {
+  padding-right: 0.5rem; }
+
+.img-wrapper.flex-content-wrapper .right-side {
+  padding-left: 0.5rem; }
+
 .project-wrapper h4 {
   margin-top: 1.75rem; }
 
@@ -678,19 +684,6 @@ COMBINED ELEMENTS -------------------
 
 .img-wrapper img {
   max-width: 100%; }
-
-.flex-img-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.flex-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-.flex-img-wrapper img:first-child {
-  margin-right: 2rem; }
 
 .video-wrapper {
   position: relative;
@@ -776,7 +769,7 @@ footer a {
 
 #SMA-banner img {
   width: 10rem;
-  margin: auto auto; }
+  margin: auto; }
 
 /* Bio styling */
 #bio-wrapper p span {
@@ -918,9 +911,11 @@ footer a {
   .content-wrapper {
     max-width: 100%;
     padding-right: 4rem; }
-  .flex-content-wrapper,
+  .content-wrapper.flex-content-wrapper,
+  .left-side,
   .overview .left-side,
-  .overview .right-side, .left-side, .right-side {
+  .overview .right-side,
+  .right-side {
     display: block;
     width: 100%; }
   .overview .left-side {
@@ -936,12 +931,7 @@ footer a {
   #profile-picture {
     margin-bottom: 4rem; }
   #toyota-prototype .flex-content-wrapper .right-side p {
-    margin-top: 1rem; }
-  .flex-content-wrapper img,
-  .flex-content-wrapper video {
-    display: block;
-    width: 50%;
-    margin: 1rem auto 2rem; } }
+    margin-top: 1rem; } }
 
 @media (max-width: 768px) {
   .hamburger-menu {
@@ -959,8 +949,19 @@ footer a {
     margin-left: 2.6875rem; }
     .main-content-wrapper.toggle {
       margin-left: 19.375rem; }
-  .flex-img-wrapper {
+  .flex-content-wrapper img,
+  .flex-content-wrapper video {
     display: block;
+    width: 50%;
+    margin: 1rem auto 2rem; }
+  .img-wrapper.flex-content-wrapper,
+  .img-wrapper.flex-content-wrapper .left-side,
+  .img-wrapper.flex-content-wrapper .right-side {
+    padding: 0;
+    display: block; }
+  .img-wrapper.flex-content-wrapper img {
+    max-width: 100%; }
+  #discover-and-share .img-wrapper.flex-content-wrapper img {
     width: 100%; } }
 
 @media (max-width: 475px) {
