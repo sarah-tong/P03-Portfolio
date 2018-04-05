@@ -12,7 +12,7 @@ html(lang="en")
 
 
   body
-    div(class="grid-wrapper" id="bio-wrapper")
+    div(class="grid-wrapper")
       div(class="nav-wrapper")
         include top-of-nav.pug
 
@@ -26,31 +26,31 @@ html(lang="en")
               a(class="button-nav" target="_blank" href="http://www.sarahtong.me/Portfolio%20Links/Resume-BandW-SarahTong.pdf") Resume
             li(class="back-desktop")
               a(href="index.html" class="button-nav") back to projects
-                
-      section
-        h1 
-          | Hello there, 
-          br 
-          | I'm Sarah
-        div(class="content-wrapper flex-content-wrapper")
-          div(class="left-side")
-            div(class="img-wrapper" id="profile-picture")
-              img(src="img/About/sarah.jpg")
+          
+      div(class="main-content-wrapper" id="bio-wrapper")      
+        section
+          h1 
+            | Hello there, 
+            br 
+            | I'm Sarah
+          div(class="content-wrapper flex-content-wrapper")
+            div(class="left-side")
+              div(class="img-wrapper" id="profile-picture")
+                img(src="img/About/sarah.jpg")
 
-          div(class="right-side")
-            p 
-              | I’m a 
-              span UX designer 
-              | with a background in 
-              span Marketing. 
-              | As a creative and business problem solver, I seek to create joyful, yet impactful digital solutions to bring value to users and results for businesses. Striving to be the bridge that connects both user and business, I engage in projects with a passion for 
-              span graphic design, interface design, and marketing communications, 
-              | as well as with an enthusiastic, self-initiating work ethic.
-            p Between design bouts, I’m on an endless search for photo-worthy food and recipes. It’s become serious business that I even have a motto for it: “the camera always eats first”. If you don’t mind my dining style, join me on my next food adventure and get to know me best over food:
-            a(class="in-text-link" href="mailto:satong@sfu.ca") satong@sfu.ca
-            a(class="in-text-link" href="https://www.linkedin.com/in/sarahanntong/") Linkedin
-            
-        include footer.pug
+            div(class="right-side")
+              p 
+                | I’m a 
+                span UX designer 
+                | with a background in 
+                span Marketing. 
+                | As a creative and business problem solver, I seek to create joyful, yet impactful digital solutions to bring value to users and results for businesses. Striving to be the bridge that connects both user and business, I engage in projects with a passion for 
+                span graphic design, interface design, and marketing communications, 
+                | as well as with an enthusiastic, self-initiating work ethic.
+              p Between design bouts, I’m on an endless search for photo-worthy food and recipes. It’s become serious business that I even have a motto for it: “the camera always eats first”. If you don’t mind my dining style, join me on my next food adventure and get to know me best over food:
+              a(class="in-text-link" href="mailto:satong@sfu.ca") satong@sfu.ca
+              a(class="in-text-link" href="https://www.linkedin.com/in/sarahanntong/") Linkedin
+              
+          include footer.pug
     
     script(src="js/hamburger.js")
-    script(src="js/back-button.js")
