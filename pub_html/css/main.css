@@ -487,9 +487,9 @@ COMBINED ELEMENTS -------------------
 
 #SMA-panel img {
   position: absolute;
-  width: 60%;
+  width: 49%;
   top: 4rem;
-  left: 0;
+  left: 0.25rem;
   right: 0;
   bottom: 0;
   margin: auto;
@@ -710,34 +710,17 @@ COMBINED ELEMENTS -------------------
 
 /* footer */
 footer {
-  margin: 6rem 0 5rem; }
-
-footer a,
-footer p {
-  position: relative;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.7rem;
-  margin: 0 auto;
-  text-decoration: none; }
-
-footer p {
-  top: 0.95rem; }
-
-footer a {
-  color: #EF6362;
-  top: 1.75rem; }
-  footer a:hover {
-    font-weight: 800; }
-  footer a:hover:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -0.15rem;
-    border-bottom: 2px dashed #EF6362; }
+  margin: 6rem 0 5rem;
+  text-align: center; }
+  footer p {
+    top: 0.95rem;
+    font-size: 0.7rem;
+    margin: 0; }
+  footer .in-text-link {
+    font-size: 0.7rem;
+    top: 1rem; }
+    footer .in-text-link:not(:last-child) {
+      margin-right: 1.95rem; }
 
 /* VIA styling */
 #VIA-business-problem-img,
@@ -770,7 +753,7 @@ footer a {
   height: 27rem; }
 
 #SMA-banner img {
-  width: 10rem;
+  width: 8rem;
   margin: auto; }
 
 /* Bio styling */
@@ -914,8 +897,9 @@ footer a {
     max-width: 100%;
     padding-right: 4rem; }
   .content-wrapper.flex-content-wrapper,
+  .left-side,
   .overview .left-side,
-  .overview .right-side, .left-side,
+  .overview .right-side,
   .right-side {
     display: block;
     width: 100%; }
@@ -969,6 +953,16 @@ footer a {
 @media (max-width: 475px) {
   .content-wrapper {
     padding-right: 2rem; } }
+
+@media (max-width: 296px) {
+  footer .in-text-link {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto; }
+    footer .in-text-link:not(:last-child) {
+      margin: 0 auto 0.5rem; } }
 
 @media (hover: none), (hover: on-demand) {
   #SMA-panel .background-colored-panel,

@@ -517,9 +517,9 @@ COMBINED ELEMENTS -------------------
 #SMA-panel {
   img {
     position: absolute;
-    width: 60%;
+    width: 49%;
     top: 4rem;
-    left: 0;
+    left: 0.25rem;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -765,37 +765,21 @@ COMBINED ELEMENTS -------------------
 /* footer */
 footer {
   margin: 6rem 0 5rem;
-}
+  text-align: center;
 
-footer a,
-footer p {
-  position: relative;
-  display: block;
-  width: fit-content;
-  font-size: 0.7rem;
-  margin: 0 auto;
-  text-decoration: none;
-}
-
-footer p {
-  top: 0.95rem;
-}
-
-footer a {
-  color: $coral;
-  top: 1.75rem;
-
-  &:hover {
-    font-weight: 800;
+  p {
+    top: 0.95rem;
+    font-size: 0.7rem;
+    margin: 0;
   }
 
-  &:hover:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -0.15rem;
-    border-bottom: 2px dashed #EF6362;
+  .in-text-link {
+    font-size: 0.7rem;
+    top: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 1.95rem;
+    }
   }
 }
 /* VIA styling */
@@ -832,7 +816,7 @@ footer a {
 }
 
 #SMA-banner img {
-  width: 10rem;
+  width: 8rem;
   margin: auto;
 }
 /* Bio styling */
@@ -993,8 +977,9 @@ footer a {
   }
 
   .content-wrapper.flex-content-wrapper,
+  .left-side,
   .overview .left-side,
-  .overview .right-side, .left-side,
+  .overview .right-side,
   .right-side {
     display: block;
     width: 100%;
@@ -1080,6 +1065,17 @@ footer a {
 @media (max-width: 475px) {
   .content-wrapper {
     padding-right: 2rem;
+  }
+}
+@media (max-width: 296px) {
+  footer .in-text-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin: 0 auto 0.5rem;
+    }
   }
 }
 @media (hover:none), (hover:on-demand) {
