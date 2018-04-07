@@ -23,7 +23,7 @@ html(lang="en")
             li
               a(class="button-nav active" href="about.html") About
             li
-              a(class="button-nav" target="_blank" href="http://www.sarahtong.me/Portfolio%20Links/Resume-BandW-SarahTong.pdf") Resume
+              a(class="button-nav" target="_blank" href="http://www.sarahtong.ca/resume/Resume-SarahTong.pdf") Resume
           
       div(class="main-content-wrapper" id="bio-wrapper")      
         section
@@ -46,9 +46,10 @@ html(lang="en")
                 span graphic design, interface design, and marketing communications, 
                 | as well as with an enthusiastic, self-initiating work ethic.
               p Between design bouts, I’m on an endless search for photo-worthy food and recipes. It’s become serious business that I even have a motto for it: “the camera always eats first”. If you don’t mind my dining style, join me on my next food adventure and get to know me best over food:
-              a(class="in-text-link" href="mailto:satong@sfu.ca") satong@sfu.ca
-              a(class="in-text-link" href="https://www.linkedin.com/in/sarahanntong/") Linkedin
+              div(id="contact-links")
+                a(class="in-text-link" href="mailto:satong@sfu.ca") satong@sfu.ca
+                a(class="in-text-link" href="https://www.linkedin.com/in/sarahanntong/") Linkedin
               
-          include footer.pug
+        include footer.pug
     
     script(src="js/hamburger.js")
