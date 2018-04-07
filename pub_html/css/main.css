@@ -49,26 +49,9 @@ INTERACTIVE ELEMENTS -------------------
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s; }
-  .in-text-link:after {
-    position: absolute;
-    z-index: -1;
-    bottom: -5px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    content: '';
-    width: 100%;
-    height: 2px;
-    -webkit-transition: all 250ms;
-    -o-transition: all 250ms;
-    transition: all 250ms;
-    content: "";
-    background-color: white; }
-
-.in-text-link:hover {
-  font-weight: 800;
-  border-bottom: 2px dashed #EF6362; }
+  .in-text-link:hover {
+    font-weight: 800;
+    border-bottom: 2px dashed #EF6362; }
 
 /* Styling for the navigation button */
 nav ul {
@@ -760,16 +743,13 @@ footer {
 #bio-wrapper p span {
   font-weight: 800; }
 
-#bio-wrapper .in-text-link {
+#contact-links .in-text-link {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 2rem 0; }
-  #bio-wrapper .in-text-link:after {
-    left: 50%; }
-  #bio-wrapper .in-text-link:hover:after {
-    width: 131%; }
+  margin: 2rem 0;
+  height: 1.35rem; }
 
 #bio-wrapper .content-wrapper {
   margin-top: 5rem; }

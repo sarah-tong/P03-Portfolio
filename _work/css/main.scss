@@ -56,24 +56,10 @@ INTERACTIVE ELEMENTS -------------------
   color: $coral;
   transition: color 0.5s;
 
-  &:after {
-    position: absolute;
-    z-index: -1;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-    width: 100%;
-    height: 2px;
-    transition: all 250ms;
-    content: "";
-    background-color: white;
+  &:hover {
+    font-weight: 800;
+    border-bottom: 2px dashed $coral;
   }
-}
-
-.in-text-link:hover {
-  font-weight: 800;
-  border-bottom: 2px dashed $coral;
 }
 /* Styling for the navigation button */
 nav ul {
@@ -824,18 +810,11 @@ footer {
   font-weight: 800;
 }
 
-#bio-wrapper .in-text-link {
+#contact-links .in-text-link {
   display: block;
   width: fit-content;
   margin: 2rem 0;
-
-  &:after {
-    left: 50%;
-  }
-
-  &:hover:after {
-    width: 131%;
-  }
+  height: 1.35rem;
 }
 
 #bio-wrapper .content-wrapper {
