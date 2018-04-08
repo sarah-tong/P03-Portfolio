@@ -13,9 +13,10 @@ html(lang="en")
 
   body
     div(class="grid-wrapper")
+      input(class="hamburger-menu-checkbox" type="checkbox")
       div(class="nav-wrapper")
         include top-of-nav.pug
-
+        
         nav(class="main-nav")
           ul
             li 
@@ -33,7 +34,7 @@ html(lang="en")
       div(class="main-content-wrapper" id="project-gallery")
         div(class="grid-wrapper swiper-container")
           div(class="swiper-wrapper")
-
+      
             div(class="project-panel-wrapper swiper-slide" id="VIA-panel")
               a(href="via.html")
                 img(class="lazyload" data-sizes="auto" data-src="img/VIA/VIA-train.jpg" alt="VIA train project image")
@@ -45,7 +46,7 @@ html(lang="en")
                   span(class="line")
                   p(class="project-name") VIA Rail
                   p(class="category") Interface Design
-            
+      
             div(class="project-panel-wrapper swiper-slide" id="toyota-panel")
               a(href="toyota.html")
                 img(class="lazyload" data-sizes="auto" data-src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
@@ -57,7 +58,7 @@ html(lang="en")
                   span(class="line")
                   p(class="project-name") Toyota
                   p(class="category") Interface Design
-            
+      
             div(class="project-panel-wrapper swiper-slide" id="intl-coop-panel")
               a(href="international-coop.html")
                 img(class="lazyload" data-sizes="auto" data-src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
@@ -69,7 +70,7 @@ html(lang="en")
                   span(class="line")
                   p(class="project-name") International Co-op
                   p(class="category") Marketing
-            
+      
             div(class="project-panel-wrapper swiper-slide" id="SMA-panel")
               a(href="student-marketing-association.html")
                 div(class="background-colored-panel")
@@ -82,9 +83,61 @@ html(lang="en")
                   span(class="line")
                   p(class="project-name") Student Marketing Association
                   p(class="category") Marketing
-                
+      
           div(class="swiper-button-prev") &#8592;
           div(class="swiper-button-next") &#8594;
+    
+        noscript
+          div(class="grid-wrapper")
+        
+            div(class="project-panel-wrapper" id="VIA-panel")
+              a(href="via.html")
+                img(src="img/VIA/VIA-train.jpg" alt="VIA train project image")
+                div(class="blue-img-filter") 
+                span(class="overlay")
+                div(class="project-detail")
+                  div(class="project-label-background")
+                  p(class="project-number") 01
+                  span(class="line")
+                  p(class="project-name") VIA Rail
+                  p(class="category") Interface Design
+        
+            div(class="project-panel-wrapper" id="toyota-panel")
+              a(href="toyota.html")
+                img(src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
+                div(class="blue-img-filter")
+                span(class="overlay")
+                div(class="project-detail")
+                  div(class="project-label-background")
+                  p(class="project-number") 02
+                  span(class="line")
+                  p(class="project-name") Toyota
+                  p(class="category") Interface Design
+        
+            div(class="project-panel-wrapper" id="intl-coop-panel")
+              a(href="international-coop.html")
+                img(src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
+                div(class="blue-img-filter")
+                span(class="overlay")
+                div(class="project-detail")
+                  div(class="project-label-background")
+                  p(class="project-number") 03
+                  span(class="line")
+                  p(class="project-name") International Co-op
+                  p(class="category") Marketing
+        
+            div(class="project-panel-wrapper" id="SMA-panel")
+              a(href="student-marketing-association.html")
+                div(class="background-colored-panel")
+                img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
+                div(class="blue-img-filter")
+                span(class="overlay")
+                div(class="project-detail")
+                  div(class="project-label-background")
+                  p(class="project-number") 04
+                  span(class="line")
+                  p(class="project-name") Student Marketing Association
+                  p(class="category") Marketing
 
     script(src="js/hamburger.js")
     script(src="js/jquery-3.3.1.min.js")
