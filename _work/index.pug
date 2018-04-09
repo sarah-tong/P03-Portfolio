@@ -9,7 +9,7 @@ html(lang="en")
     link(rel="stylesheet" href="css/main.css")
     link(rel="stylesheet" href="css/normalize.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i")
-    link(rel="stylesheet" href="css/swiper-index-custom.css")
+    link(rel="stylesheet" href="css/swiper-index-custom.min.css")
 
   body
     div(class="grid-wrapper")
@@ -35,9 +35,9 @@ html(lang="en")
         div(class="grid-wrapper swiper-container")
           div(class="swiper-wrapper")
       
-            div(class="project-panel-wrapper swiper-slide" id="VIA-panel")
+            div(class="project-panel-wrapper swiper-slide" class="VIA-panel")
               a(href="via.html")
-                img(class="lazyload" data-sizes="auto" data-src="img/VIA/VIA-train.jpg" alt="VIA train project image")
+                img(class="lazyload" data-sizes="auto" data-src="img/VIA/VIA-train.jpg" src="img/VIA/VIA-train.jpg" alt="VIA train project image")
                 div(class="blue-img-filter") 
                 span(class="overlay")
                 div(class="project-detail")
@@ -47,9 +47,9 @@ html(lang="en")
                   p(class="project-name") VIA Rail
                   p(class="category") Interface Design
       
-            div(class="project-panel-wrapper swiper-slide" id="toyota-panel")
+            div(class="project-panel-wrapper swiper-slide" class="toyota-panel")
               a(href="toyota.html")
-                img(class="lazyload" data-sizes="auto" data-src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
+                img(class="lazyload" data-sizes="auto" data-src="img/Toyota/Toyota.jpg" src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
                 div(class="blue-img-filter")
                 span(class="overlay")
                 div(class="project-detail")
@@ -59,9 +59,9 @@ html(lang="en")
                   p(class="project-name") Toyota
                   p(class="category") Interface Design
       
-            div(class="project-panel-wrapper swiper-slide" id="intl-coop-panel")
+            div(class="project-panel-wrapper swiper-slide" class="intl-coop-panel")
               a(href="international-coop.html")
-                img(class="lazyload" data-sizes="auto" data-src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
+                img(class="lazyload" data-sizes="auto" data-src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
                 div(class="blue-img-filter")
                 span(class="overlay")
                 div(class="project-detail")
@@ -71,7 +71,7 @@ html(lang="en")
                   p(class="project-name") International Co-op
                   p(class="category") Marketing
       
-            div(class="project-panel-wrapper swiper-slide" id="SMA-panel")
+            div(class="project-panel-wrapper swiper-slide" class="SMA-panel")
               a(href="student-marketing-association.html")
                 div(class="background-colored-panel")
                 img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
@@ -90,7 +90,7 @@ html(lang="en")
         noscript
           div(class="grid-wrapper javascript-disabled")
         
-            div(class="project-panel-wrapper" id="VIA-panel")
+            div(class="project-panel-wrapper" class="VIA-panel")
               a(href="via.html")
                 img(src="img/VIA/VIA-train.jpg" alt="VIA train project image")
                 div(class="blue-img-filter") 
@@ -102,7 +102,7 @@ html(lang="en")
                   p(class="project-name") VIA Rail
                   p(class="category") Interface Design
         
-            div(class="project-panel-wrapper" id="toyota-panel")
+            div(class="project-panel-wrapper" class="toyota-panel")
               a(href="toyota.html")
                 img(src="img/Toyota/Toyota.jpg" alt="Toyota automated project image")
                 div(class="blue-img-filter")
@@ -114,7 +114,7 @@ html(lang="en")
                   p(class="project-name") Toyota
                   p(class="category") Interface Design
         
-            div(class="project-panel-wrapper" id="intl-coop-panel")
+            div(class="project-panel-wrapper" class="intl-coop-panel")
               a(href="international-coop.html")
                 img(src="img/Intl-Coop/Intl-Coop-project-banner.jpeg" alt="International Co-op project image - person looking deeply out on top of a mountain")
                 div(class="blue-img-filter")
@@ -126,7 +126,7 @@ html(lang="en")
                   p(class="project-name") International Co-op
                   p(class="category") Marketing
         
-            div(class="project-panel-wrapper" id="SMA-panel")
+            div(class="project-panel-wrapper" class="SMA-panel")
               a(href="student-marketing-association.html")
                 div(class="background-colored-panel")
                 img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
