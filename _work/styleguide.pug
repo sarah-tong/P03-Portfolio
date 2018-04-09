@@ -79,16 +79,39 @@ html(lang="en")
             
             section 
               div(class="content-wrapper")             
-                h3 CTA Button
+                h3 Logo Button
                 
                 h4 CSS selector
-                p .cta-button
+                p .logo
 
                 h4 Sample code:
-                code &lt;a href="#" class="cta-button"&gt;CTA Button&lt;/a&gt;
+                code 
+                  | &lt;div class="logo"&gt;
+                  br
+                  | &nbsp;&lt;a href="#"&gt;ST&lt;/a&gt;
+                  br
+                  | &lt;/div&gt;
                 
                 h4 Rendered element:
-                a(class="cta-button" href="#") CTA Button
+                div(class="logo")
+                  a(href="#") ST
+                  
+            section 
+              div(class="content-wrapper")             
+                h3 Swiper Buttons
+                
+                h4 CSS selector
+                p .swiper-button-prev, .swiper-button-next
+
+                h4 Sample code:
+                code 
+                  | &lt;div class="swiper-button-prev"&gt; &amp;#8592;
+                  br
+                  | &lt;div class="swiper-button-next"&gt; &amp;#8594;
+                
+                h4 Rendered element:
+                div(class="swiper-button-prev") &#8592;
+                div(class="swiper-button-next") &#8594;
               
           section(id="text-elements")
             div(class="content-wrapper")

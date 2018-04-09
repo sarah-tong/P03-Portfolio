@@ -15,24 +15,41 @@ body {
   line-height: 1.5;
   letter-spacing: 1px; }
 
+#citations section[id],
 #style-guide section[id] {
   margin-top: 5rem; }
 
+#citations section:not(:first-child),
 #style-guide section:not(:first-child) {
   margin-top: 5rem; }
 
+#citations h3,
 #style-guide h3 {
   margin-bottom: 3rem; }
 
+#citations .main-nav,
 #style-guide .main-nav {
   padding-top: 0; }
 
+#citations .main-nav li,
+#style-guide .main-nav li {
+  padding: 0 2.25rem 1.85rem 0; }
+
+#citations .logo,
+#style-guide .logo {
+  top: 0;
+  left: 0; }
+
+#citations .project-panel-wrapper,
 #style-guide .project-panel-wrapper {
   height: 100vh; }
+  #citations .project-panel-wrapper .project-label-background,
   #style-guide .project-panel-wrapper .project-label-background {
     width: 23rem; }
+  #citations .project-panel-wrapper .line,
   #style-guide .project-panel-wrapper .line {
     top: 14.5rem; }
+  #citations .project-panel-wrapper .category,
   #style-guide .project-panel-wrapper .category {
     top: 15rem; }
 
@@ -100,6 +117,75 @@ nav li {
     bottom: -0.25rem;
     border-bottom: 2px dashed #EF6362; }
 
+/* logo */
+.logo {
+  position: relative;
+  display: block;
+  top: 2.8rem;
+  left: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  z-index: 10; }
+  .logo a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    background: #EF6362;
+    color: white; }
+  .logo :before {
+    content: '';
+    position: absolute;
+    border: #EF6362 dashed 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .logo :hover:before {
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px; }
+
+/* Styling for Swiper Buttons */
+#style-guide .swiper-button-next,
+#style-guide .swiper-button-prev {
+  z-index: 10;
+  cursor: pointer;
+  top: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  color: black;
+  background: rgba(220, 220, 220, 0.75);
+  border: 1px solid white;
+  -webkit-transition: padding 0.5s;
+  -o-transition: padding 0.5s;
+  transition: padding 0.5s; }
+
+#style-guide .swiper-button-next:hover {
+  padding-left: 1rem; }
+
+#style-guide .swiper-button-prev:hover {
+  padding-right: 1rem; }
+
 /* Styling for cta buttons */
 .cta-button {
   position: relative;
@@ -110,7 +196,8 @@ nav li {
   letter-spacing: 0.0625rem;
   padding: 0.5rem;
   background: #EF6362;
-  color: white; }
+  color: white;
+  z-index: 10; }
   .cta-button:before {
     content: '';
     position: absolute;
@@ -249,51 +336,6 @@ ol {
   -o-transition: margin 0.5s;
   transition: margin 0.5s; }
 
-/* logo */
-.logo {
-  position: relative;
-  display: block;
-  top: 2.8rem;
-  left: 4rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0;
-  z-index: 10; }
-  .logo a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-decoration: none;
-    background: #EF6362;
-    color: white; }
-  .logo :before {
-    content: '';
-    position: absolute;
-    border: #EF6362 dashed 2px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s; }
-  .logo :hover:before {
-    top: -4px;
-    right: -4px;
-    bottom: -4px;
-    left: -4px; }
-
 /*  Styling for mobile nav button */
 .hamburger-menu {
   position: absolute;
@@ -359,7 +401,7 @@ ol {
   position: absolute;
   width: 19.375rem;
   padding: 0 4rem;
-  bottom: 3rem;
+  bottom: 5rem;
   color: black; }
   .short-bio span {
     display: block;
@@ -465,7 +507,7 @@ ol {
   position: absolute;
   width: 20rem;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -484,10 +526,12 @@ ol {
     top: 27rem; }
 
 #VIA-panel img {
+  position: absolute;
   height: 106vh;
-  -webkit-transform: translate(-48%, 0%);
-  -ms-transform: translate(-48%, 0%);
-  transform: translate(-48%, 0%);
+  left: 70%;
+  -webkit-transform: translate(-70%, 0%);
+  -ms-transform: translate(-70%, 0%);
+  transform: translate(-70%, 0%);
   -webkit-filter: grayscale(100%) contrast(250%) brightness(150%);
   filter: grayscale(100%) contrast(250%) brightness(150%);
   -webkit-transition: -webkit-filter 0.5s;
@@ -501,10 +545,13 @@ ol {
   filter: grayscale(0%) contrast(100%) brightness(100%); }
 
 #toyota-panel img {
+  position: absolute;
   height: 100vh;
-  -webkit-transform: translate(-15%, 0%);
-  -ms-transform: translate(-15%, 0%);
-  transform: translate(-15%, 0%);
+  left: 47%;
+  top: -64%;
+  -webkit-transform: translate(-47%, 64%);
+  -ms-transform: translate(-47%, 64%);
+  transform: translate(-47%, 64%);
   -webkit-filter: grayscale(100%) contrast(150%) brightness(700%);
   filter: grayscale(100%) contrast(150%) brightness(700%);
   -webkit-transition: -webkit-filter 0.5s;
@@ -518,10 +565,13 @@ ol {
   filter: grayscale(0%) contrast(100%) brightness(100%); }
 
 #intl-coop-panel img {
+  position: absolute;
   height: 118vh;
-  -webkit-transform: translate(-18%, 0%);
-  -ms-transform: translate(-18%, 0%);
-  transform: translate(-18%, 0%);
+  left: 25%;
+  top: 0;
+  -webkit-transform: translate(-25%, 0%);
+  -ms-transform: translate(-25%, 0%);
+  transform: translate(-25%, 0%);
   -webkit-filter: grayscale(100%) contrast(200%) brightness(150%);
   filter: grayscale(100%) contrast(200%) brightness(150%);
   -webkit-transition: -webkit-filter 0.5s;
@@ -821,7 +871,7 @@ footer {
   line-height: 2rem; }
 
 /* Media Queries */
-@media (min-width: 1500px) {
+@media (min-width: 1280px) {
   .project-panel-wrapper {
     min-width: 19.375rem;
     width: auto;
@@ -829,11 +879,7 @@ footer {
     -ms-flex-positive: 1;
     flex-grow: 1;
     -ms-flex-preferred-size: 0;
-    flex-basis: 0; }
-  #toyota-panel img {
-    -webkit-transform: translate(-8%, 0%);
-    -ms-transform: translate(-8%, 0%);
-    transform: translate(-8%, 0%); } }
+    flex-basis: 0; } }
 
 @media (max-width: 1118px) {
   .content-wrapper,
@@ -859,7 +905,7 @@ footer {
   #profile-picture {
     margin-bottom: 4rem; }
   #toyota-prototype .flex-content-wrapper .right-side p {
-    margin-top: 1rem; } }
+    margin-top: 3.2rem; } }
 
 @media (max-width: 913px) {
   #bio-wrapper .content-wrapper.flex-content-wrapper,
@@ -910,6 +956,8 @@ footer {
     display: block; }
   .img-wrapper.flex-content-wrapper img {
     max-width: 100%; }
+  #toyota-prototype .flex-content-wrapper .right-side p {
+    margin-top: 1rem; }
   #discover-and-share .img-wrapper.flex-content-wrapper img {
     width: 100%; } }
 
